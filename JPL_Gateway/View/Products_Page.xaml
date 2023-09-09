@@ -1,0 +1,100 @@
+﻿<Page x:Class="JPL_Gateway.View.Products_Page"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:JPL_Gateway.View"
+      UseLayoutRounding="True"
+      mc:Ignorable="d" 
+      d:DesignHeight="650" d:DesignWidth="920"
+      Title="" KeyboardNavigation.TabNavigation="None">
+    <Page.Background>
+        <ImageBrush ImageSource="/JPL_Gateway;component/Resources/Watermark.png" Stretch="UniformToFill"/>
+    </Page.Background>
+
+    <Grid>
+        <Button x:Name="wired" Width="130" Height="130" Margin="165,125,0,0" Style="{StaticResource ScaleButton}" Content="" VerticalAlignment="Top" Focusable="False" HorizontalAlignment="Left" Click="wired_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/JPL_Gateway;component/Resources/Products/Wired_headsets.png"/>
+            </Button.Background>
+        </Button>
+
+        <Grid HorizontalAlignment="Left" Height="25"  VerticalAlignment="Top" Width="200" Margin="130,280,0,0">
+            <Viewbox Stretch="Uniform" StretchDirection="DownOnly">
+                <TextBlock Text="{Binding Path=StrProduct02, Source={StaticResource Resources}}" TextAlignment="Center" MinWidth="200" FontFamily="/JPL_Gateway;component/Font/#Source Sans Pro" FontSize="18" Foreground="#0C2340"/>
+            </Viewbox>
+        </Grid>
+
+        <Button x:Name="wireless" Width="130" Height="130" Margin="395,125,0,0" Style="{StaticResource ScaleButton}" Content="" VerticalAlignment="Top" HorizontalAlignment="Left" Focusable="False" Click="wireless_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/JPL_Gateway;component/Resources/Products/Wireless_Headsets.png"/>
+            </Button.Background>
+        </Button>
+
+        <Grid HorizontalAlignment="Left" Height="25"  VerticalAlignment="Top" Width="200" Margin="361,280,0,0">
+            <Viewbox Stretch="Uniform" StretchDirection="DownOnly">
+                <TextBlock Text="{Binding Path=StrProduct04, Source={StaticResource Resources}}" TextAlignment="Center" MinWidth="200" FontFamily="/JPL_Gateway;component/Font/#Source Sans Pro" FontSize="18" Foreground="#0C2340"/>
+            </Viewbox>
+        </Grid>
+
+        <Button x:Name="conference" Margin="625,125,0,0" Style="{StaticResource ScaleButton}" Content="" Height="130" VerticalAlignment="Top" Focusable="False" HorizontalAlignment="Left" Width="130" Click="conference_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/JPL_Gateway;component/Resources/Products/Video_Conferencing.png"/>
+            </Button.Background>
+        </Button>
+
+        <Grid HorizontalAlignment="Left" Height="25"  VerticalAlignment="Top" Width="200" Margin="591,280,0,0">
+            <Viewbox Stretch="Uniform" StretchDirection="DownOnly">
+                <TextBlock Text="{Binding Path=StrProduct06, Source={StaticResource Resources}}" TextAlignment="Center" MinWidth="200" FontFamily="/JPL_Gateway;component/Font/#Source Sans Pro" FontSize="18" Foreground="#0C2340"/>
+            </Viewbox>
+        </Grid>
+
+        <Button x:Name="spkphone" Width="130" Height="130" Margin="60,333,0,0" Style="{StaticResource ScaleButton}" Content="" VerticalAlignment="Top" Focusable="False" HorizontalAlignment="Left" Click="spkphone_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/JPL_Gateway;component/Resources/Products/Speakerphones.png"/>
+            </Button.Background>
+        </Button>
+
+        <Grid HorizontalAlignment="Left" Height="25"  VerticalAlignment="Top" Width="200" Margin="25,488,0,0">
+            <Viewbox Stretch="Uniform" StretchDirection="DownOnly">
+                <TextBlock Text="{Binding Path=StrProduct01, Source={StaticResource Resources}}" TextAlignment="Center" MinWidth="200" FontFamily="/JPL_Gateway;component/Font/#Source Sans Pro" FontSize="18" Foreground="#0C2340"/>
+            </Viewbox>
+        </Grid>
+
+        <Button x:Name="accessorie" Width="130" Height="130" Margin="280,333,0,0" Style="{StaticResource ScaleButton}" Content="" VerticalAlignment="Top" HorizontalAlignment="Left" Focusable="False" Click="accessorie_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/JPL_Gateway;component/Resources/Products/Accessories.png"/>
+            </Button.Background>
+        </Button>
+
+        <Grid HorizontalAlignment="Left" Height="25"  VerticalAlignment="Top" Width="200" Margin="244,488,0,0">
+            <Viewbox Stretch="Uniform" StretchDirection="DownOnly">
+                <TextBlock Text="{Binding Path=StrProduct03, Source={StaticResource Resources}}" TextAlignment="Center" MinWidth="200" FontFamily="/JPL_Gateway;component/Font/#Source Sans Pro" FontSize="18" Foreground="#0C2340"/>
+            </Viewbox>
+        </Grid>
+
+        <Button x:Name="lead" Width="130" Height="130" Margin="510,333,0,0" Style="{StaticResource ScaleButton}" Content="" VerticalAlignment="Top" HorizontalAlignment="Left" Focusable="False" Click="lead_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/JPL_Gateway;component/Resources/Products/Bottom_Leads.png"/>
+            </Button.Background>
+        </Button>
+
+        <Grid HorizontalAlignment="Left" Height="25"  VerticalAlignment="Top" Width="200" Margin="475,488,0,0">
+            <Viewbox Stretch="Uniform" StretchDirection="DownOnly">
+                <TextBlock Text="{Binding Path=StrProduct05, Source={StaticResource Resources}}" TextAlignment="Center" MinWidth="200" FontFamily="/JPL_Gateway;component/Font/#Source Sans Pro" FontSize="18" Foreground="#0C2340"/>
+            </Viewbox>
+        </Grid>
+
+        <Button x:Name="av" Height="130" Margin="730,333,0,0" Style="{StaticResource ScaleButton}" Content="" VerticalAlignment="Top" Focusable="False" HorizontalAlignment="Left" Width="130" Click="av_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/JPL_Gateway;component/Resources/Products/AV_Cables.png"/>
+            </Button.Background>
+        </Button>
+
+        <Grid HorizontalAlignment="Left" Height="25"  VerticalAlignment="Top" Width="200" Margin="696,488,0,0">
+            <Viewbox Stretch="Uniform" StretchDirection="DownOnly">
+                <TextBlock Text="{Binding Path=StrProduct07, Source={StaticResource Resources}}" TextAlignment="Center" MinWidth="200" FontFamily="/JPL_Gateway;component/Font/#Source Sans Pro" FontSize="18" Foreground="#0C2340"/>
+            </Viewbox>
+        </Grid>
+    </Grid>
+</Page>

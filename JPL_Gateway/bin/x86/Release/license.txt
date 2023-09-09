@@ -1,0 +1,54 @@
+The software agreement is made up of the End User License Agreement (EULA) and Privacy Policy (visit: http://www.jpltele.com/files/JPL-Telecom-Privacy-Policy.pdf)
+ 
+ 
+JPL Gateway, allows users to perform the following Main tasks:
+- Call accept/reject, synchronize mute
+- Update device firmware on going.
+
+CAREFULLY READ THE FOLLOWING END USER LICENSE AGREEMENT. ONCE CHECKED  AND YOU ACCEPT, PLEASE TICK THE "ACCEPT" CHECKBOX .YOU WILL BE  CONSENTING TO BE BOUND BY OUR TERMS  AND ARE BECOMING A PARTY TO THIS AGREEMENT. IF YOU DO NOT AGREE TO ALL OF THE TERMS OF THIS AGREEMENT, DO NOT TICK THE ¡°ACCEPT¡± CHECKBOX INDICATING YOU DO NOT CONSENT TO THE TERMS OF THIS LICENSE AGREEMENT AND RECOGNISE YOU WILL NOT ACCESS OR USE THE SOFTWARE. 
+ 
+ 
+1.         LICENSE GRANT: 
+ 
+(a)        The software contains computer software applications and may include associated media, printed materials, content, and "online" or electronic documentation (collectively, the "Software").  
+(b)        "You" means the person or company who is being licensed to use the Software.
+(c)        "We" , ¡°JPL¡± and "us" means JPL TELECOM LTD
+(d)        We hereby grant you a personal, nonexclusive license to use the Software in connection with your use of any JPL TELECOM  product.
+ 
+2.         TITLE.  The Software is being licensed to you. With the exception of your license under this License Agreement, we own all right, title and interest in the Software.
+ 
+3.         ARCHIVE OR BACKUP COPIES.  JPL will allow you to either, make one copy of the Software solely for backup or archive purposes or you may transfer the Software to a single hard disk, provided you keep the original solely for backup or archive purposes.
+ 
+4.         THINGS YOU MAY NOT DO. The Software is protected by UK copyright laws and international treaties.  You may not:
+(a)	Copy the Software except to make archive or backup copies as provided above,
+(b)	Modify or adapt the Software or merge it into another program,
+(c)	Reverse engineer, disassemble, decompile or make any attempt to discover the source code of the Software,
+(d)        Place the Software onto a server so that it is accessible via a public network such as the Internet, or
+(e)        Sublicense, rent, lease or lend any portion of the Software.
+ 
+5.         TRANSFERS.  You may transfer all your rights to use the Software to another person or legal entity, provided you transfer this License Agreement, the Software, including all copies, update and prior versions to such person or entity and that you retain no copies, including copies stored on a computer.
+ 
+6.         DISCLAIMER OF WARRANTY.  THE SOFTWARE IS PROVIDED TO YOU "AS IS," AND JPL MAKES NO WARRANTY AS TO ITS USE OR PERFORMANCE.  JPL EXPRESSLY DISCLAIMS ALL WARRANTIES, INCLUDING ANY WARRANTY OF NON-INFRINGEMENT OF THE INTELLECTUAL PROPERTY RIGHTS OF ANY PERSON, AND THE IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.  NO ORAL OR WRITTEN INFORMATION OR ADVICE GIVEN BY JPL, ITS EMPLOYEES, OR DISTRIBUTORS SHALL INCREASE THE SCOPE OF THE ABOVE WARRANTIES OR CREATE ANY NEW WARRANTIES. SOME TERRITORIES DO NOT ALLOW THE EXCLUSION OF IMPLIED WARRANTIES, SO THE ABOVE EXCLUSION MAY NOT APPLY TO YOU.  
+ 
+7.         EXCLUSION OF DAMAGES.  TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL JPL OR ITS SUPPLIERS BE LIABLE FOR ANY SPECIAL, INCIDENTAL, PUNITIVE, INDIRECT, OR CONSEQUENTIAL DAMAGES WHATSOEVER (INCLUDING, BUT NOT LIMITED TO, DAMAGES FOR INFRINGEMENT, LOSS OF PROFITS OR CONFIDENTIAL OR OTHER INFORMATION, FOR BUSINESS INTERRUPTION, FOR PERSONAL INJURY, FOR LOSS OF PRIVACY, FOR FAILURE TO MEET ANY DUTY INCLUDING OF GOOD FAITH OR OF REASONABLE CARE, FOR NEGLIGENCE, AND FOR ANY OTHER PECUNIARY OR OTHER LOSS WHATSOEVER) ARISING OUT OF OR IN ANY WAY RELATED TO THE USE OF OR INABILITY TO USE THE SOFTWARE, OF OR FAILURE TO PROVIDE SUPPORT OR OTHER SERVICES, INFORMATION, SOFTWARE, AND RELATED CONTENT THROUGH THE SOFTWARE OR OTHERWISE ARISING OUT OF OR THE USE OF THE SOFTWARE, OR OTHERWISE UNDER OR IN CONNECTION WITH ANY PROVISION OF THIS LICENSE AGREEMENT, EVEN IN THE EVENT OF THE FAULT, TORT (INCLUDING NEGLIGENCE), STRICT LIABILITY, BREACH OF CONTRACT, OR BREACH OF WARRANTY OF JPL OR ANY SUPPLIER, EVEN IF JPL OR ANY OTHER SUPPLIER HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. 
+ 
+8.	LIMITATION OF LIABILITY. NOTWITHSTANDING ANY DAMAGES THAT YOU MIGHT INCUR FOR ANY REASON WHATSOEVER (INCLUDING, WITHOUT LIMITATION, ALL DAMAGES REFERENCED ABOVE AND ALL DIRECT OR GENERAL DAMAGES), THE ENTIRE LIABILITY OF JPL AND ANY OF ITS SUPPLIERS UNDER ANY PROVISION OF THIS LICENSE AGREEMENT AND YOUR EXCLUSIVE REMEDY FOR ALL OF THE FOREGOING SHALL BE LIMITED TO THE GREATER OF THE AMOUNT ACTUALLY PAID BY YOU FOR THE SOFTWARE OR ¡Ì10.00.  THE FOREGOING LIMITATIONS, EXCLUSIONS, AND DISCLAIMERS SHALL APPLY TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, EVEN IF ANY REMEDY FAILS ITS ESSENTIAL PURPOSE. 
+ 
+9.	TERM AND TERMINATION.  This License Agreement takes effect upon installation of the Software and remains effective until fully terminated. You may terminate it at any time by destroying all copies of the Software in your possession, to include any copy on your computer system. This will also automatically terminate if you fail to comply with any term or condition of this License Agreement. You agree on termination of this License Agreement to either return to us or destroy all copies of the Software in your possession. 
+ 
+ 
+ 
+10.	CONFIDENTIALITY.  The Software contains trade secrets and proprietary know-how that belong to JPL and each respective third party having rights to the software applications contained in the Software and it is being made available to you in strict confidence. ANY USE OR DISCLOSURE OF THE SOFTWARE, OR OF ITS ALGORITHMS, PROTOCOLS OR INTERFACES, OTHER THAN IN STRICT ACCORDANCE WITH THIS LICENSE AGREEMENT, MAY BE ACTIONABLE AS A VIOLATION OF OUR TRADE SECRET RIGHTS.
+ 
+
+
+
+11.        GENERAL PROVISIONS. 
+ 
+(a)	This written License Agreement is the exclusive agreement between you and JPL concerning the Software and supersedes any and all prior oral or written agreements, negotiations or other dealings between JPL concerning the Software.  
+(b)	This License Agreement may be modified only in writing signed by you and JPL. 
+(c)	In the event of litigation between you and JPL concerning the Software, the prevailing party in the litigation will be entitled to recover attorney fees and expenses from the other party.  
+(d)	This License Agreement is governed by the laws of the United Kingdom. All disputes arising out of, or in connection with, this License Agreement shall be subject to the exclusive jurisdiction of the courts in the UK, with the exception that either party may seek judicial relief in any court of competent jurisdiction in actions to obtain injunctive relief for enforcement of its intellectual or industrial property rights. 
+(e)        You agree that the Software will not be shipped, transferred or exported into any country or used in any manner prohibited by the UK Export Administration Act or any other export laws, restrictions or regulations. 
+(f)         You agree that the English version of this License Agreement will control any conflicts in the interpretation of this Agreement.
+

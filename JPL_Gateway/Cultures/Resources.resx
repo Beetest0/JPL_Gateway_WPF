@@ -1,0 +1,519 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="StrContact01" xml:space="preserve">
+    <value>Contact Us</value>
+    <comment>10.Contact_Us_01</comment>
+  </data>
+  <data name="StrContact02" xml:space="preserve">
+    <value>For General Enquiries Please use the enquiry form below</value>
+    <comment>10.Contact_Us_02</comment>
+  </data>
+  <data name="StrContact03" xml:space="preserve">
+    <value>Your Name*</value>
+    <comment>10.Contact_Us_03</comment>
+  </data>
+  <data name="StrContact04" xml:space="preserve">
+    <value>Email Address*</value>
+    <comment>10.Contact_Us_04</comment>
+  </data>
+  <data name="StrContact05" xml:space="preserve">
+    <value>Company Web Address</value>
+    <comment>10.Contact_Us_05</comment>
+  </data>
+  <data name="StrContact06" xml:space="preserve">
+    <value>Phone Number*</value>
+    <comment>10.Contact_Us_06</comment>
+  </data>
+  <data name="StrContact07" xml:space="preserve">
+    <value>Your Enquiry*</value>
+    <comment>10.Contact_Us_07</comment>
+  </data>
+  <data name="StrContact08" xml:space="preserve">
+    <value>SEND ENQUIRY</value>
+    <comment>10.Contact_Us_08</comment>
+  </data>
+  <data name="StrContact09" xml:space="preserve">
+    <value>Alternatively, you can contact JPL Telecom by phone,
+email, or Live Chat during business hours.
+Monday to Friday, 9:00am to 5:00pm</value>
+    <comment>10.Contact_Us_09</comment>
+  </data>
+  <data name="StrContact10" xml:space="preserve">
+    <value>CHAT NOW</value>
+    <comment>10.Contact_Us_10</comment>
+  </data>
+  <data name="StrContact11" xml:space="preserve">
+    <value>VISIT OUR WEBSITE</value>
+    <comment>10.Contact_Us_11</comment>
+  </data>
+  <data name="StrContact12" xml:space="preserve">
+    <value>CONTACT JPL</value>
+    <comment>10.Contact_Us_12</comment>
+  </data>
+  <data name="StrContext01" xml:space="preserve">
+    <value>Open JPL Gateway</value>
+    <comment>09.ContextMenu_01</comment>
+  </data>
+  <data name="StrContext02" xml:space="preserve">
+    <value>Exit</value>
+    <comment>09.ContextMenu_02</comment>
+  </data>
+  <data name="StrDevice01" xml:space="preserve">
+    <value>Back</value>
+    <comment>02.Device_Page_01</comment>
+  </data>
+  <data name="StrDevice02" xml:space="preserve">
+    <value>Device
+Updates</value>
+    <comment>02.Device_Page_02</comment>
+  </data>
+  <data name="StrDevice03" xml:space="preserve">
+    <value>Device
+Settings</value>
+    <comment>02.Device_Page_03</comment>
+  </data>
+  <data name="StrDevice_setting01" xml:space="preserve">
+    <value>Device Settings</value>
+    <comment>04.Device_Settings_Page_01</comment>
+  </data>
+  <data name="StrDevice_setting02" xml:space="preserve">
+    <value>RESET SETTINGS</value>
+    <comment>04.Device_Settings_Page_02</comment>
+  </data>
+  <data name="StrDevice_setting03" xml:space="preserve">
+    <value>SAVE ALL SETTINGS</value>
+    <comment>04.Device_Settings_Page_03</comment>
+  </data>
+  <data name="StrDevice_setting04" xml:space="preserve">
+    <value>EQ Setting</value>
+    <comment>04.Device_Settings_Page_04</comment>
+  </data>
+  <data name="StrDevice_setting05" xml:space="preserve">
+    <value>Preset</value>
+    <comment>04.Device_Settings_Page_05</comment>
+  </data>
+  <data name="StrDevice_setting06" xml:space="preserve">
+    <value>Frequency</value>
+    <comment>04.Device_Settings_Page_06</comment>
+  </data>
+  <data name="StrDevice_setting07" xml:space="preserve">
+    <value>APPLY</value>
+    <comment>04.Device_Settings_Page_07</comment>
+  </data>
+  <data name="StrDevice_setting08" xml:space="preserve">
+    <value>Preferred Softphone</value>
+    <comment>04.Device_Settings_Page_08</comment>
+  </data>
+  <data name="StrDevice_setting09" xml:space="preserve">
+    <value>Beep Tone</value>
+    <comment>04.Device_Settings_Page_09</comment>
+  </data>
+  <data name="StrDevice_setting10" xml:space="preserve">
+    <value>Key tone</value>
+    <comment>04.Device_Settings_Page_10</comment>
+  </data>
+  <data name="StrDevice_setting11" xml:space="preserve">
+    <value>Ring alert tone</value>
+    <comment>04.Device_Settings_Page_11</comment>
+  </data>
+  <data name="StrDevice_setting12" xml:space="preserve">
+    <value>Mute interval time</value>
+    <comment>04.Device_Settings_Page_12</comment>
+  </data>
+  <data name="StrDevice_update01" xml:space="preserve">
+    <value>Device Updates</value>
+    <comment>03.Device_Updates_Page_01</comment>
+  </data>
+  <data name="StrDevice_update02" xml:space="preserve">
+    <value>Current Version</value>
+    <comment>03.Device_Updates_Page_02</comment>
+  </data>
+  <data name="StrDevice_update03" xml:space="preserve">
+    <value>Latest Version</value>
+    <comment>03.Device_Updates_Page_03</comment>
+  </data>
+  <data name="StrDevice_update04" xml:space="preserve">
+    <value>Custom Update</value>
+    <comment>03.Device_Updates_Page_04</comment>
+  </data>
+  <data name="StrDevice_update05" xml:space="preserve">
+    <value>(locked) request for access</value>
+    <comment>03.Device_Updates_Page_05</comment>
+  </data>
+  <data name="StrDevice_update06" xml:space="preserve">
+    <value>Available Updates</value>
+    <comment>03.Device_Updates_Page_06</comment>
+  </data>
+  <data name="StrDevice_update07" xml:space="preserve">
+    <value>Up to Date</value>
+    <comment>03.Device_Updates_Page_07</comment>
+  </data>
+  <data name="StrDevice_update08" xml:space="preserve">
+    <value>Preferred Softphone</value>
+    <comment>03.Device_Updates_Page_08</comment>
+  </data>
+  <data name="StrDevice_update09" xml:space="preserve">
+    <value>Description of update</value>
+    <comment>03.Device_Updates_Page_09</comment>
+  </data>
+  <data name="StrDevice_update10" xml:space="preserve">
+    <value>UPDATE NOW</value>
+    <comment>03.Device_Updates_Page_10</comment>
+  </data>
+  <data name="StrMain01" xml:space="preserve">
+    <value>All Devices</value>
+    <comment>01.Main_Frame_01</comment>
+  </data>
+  <data name="StrMain02" xml:space="preserve">
+    <value>Support</value>
+    <comment>01.Main_Frame_02</comment>
+  </data>
+  <data name="StrMain03" xml:space="preserve">
+    <value>Settings</value>
+    <comment>01.Main_Frame_03</comment>
+  </data>
+  <data name="StrMain04" xml:space="preserve">
+    <value>JPL Products</value>
+    <comment>01.Main_Frame_04</comment>
+  </data>
+  <data name="StrMain05" xml:space="preserve">
+    <value>Connect Your Device
+To Manage Settings</value>
+    <comment>01.Main_Frame_05</comment>
+  </data>
+  <data name="StrPopup_reset01" xml:space="preserve">
+    <value>Warning</value>
+    <comment>12.Popup_Device_Reset_01</comment>
+  </data>
+  <data name="StrPopup_reset02" xml:space="preserve">
+    <value>Reset to Factory Settings</value>
+    <comment>12.Popup_Device_Reset_02</comment>
+  </data>
+  <data name="StrPopup_reset03" xml:space="preserve">
+    <value>This will reset your device to its factory settings.
+Your settings cannot be recovered after resetting.
+Are you sure you would like to reset your device?</value>
+    <comment>12.Popup_Device_Reset_03</comment>
+  </data>
+  <data name="StrPopup_reset04" xml:space="preserve">
+    <value>Cancel</value>
+    <comment>12.Popup_Device_Reset_04</comment>
+  </data>
+  <data name="StrPopup_reset05" xml:space="preserve">
+    <value>Reset</value>
+    <comment>12.Popup_Device_Reset_05</comment>
+  </data>
+  <data name="StrPopup_update01" xml:space="preserve">
+    <value>Update</value>
+    <comment>11.Popup_Device_Update_01</comment>
+  </data>
+  <data name="StrPopup_update02" xml:space="preserve">
+    <value>Update Firmware</value>
+    <comment>11.Popup_Device_Update_02</comment>
+  </data>
+  <data name="StrPopup_update03" xml:space="preserve">
+    <value>Once firmware is updated it cannot be returned to the previous version.
+This update includes the following features;</value>
+    <comment>11.Popup_Device_Update_03</comment>
+  </data>
+  <data name="StrPopup_update04" xml:space="preserve">
+    <value>Would you like to proceed with the firmware update?</value>
+    <comment>11.Popup_Device_Update_04</comment>
+  </data>
+  <data name="StrPopup_update05" xml:space="preserve">
+    <value>Cancel</value>
+    <comment>11.Popup_Device_Update_05</comment>
+  </data>
+  <data name="StrPopup_update06" xml:space="preserve">
+    <value>Proceed</value>
+    <comment>11.Popup_Device_Update_06</comment>
+  </data>
+  <data name="StrPopup_update07" xml:space="preserve">
+    <value>Please do not disconnect the device
+during the update process</value>
+    <comment>11.Popup_Device_Update_07</comment>
+  </data>
+  <data name="StrPopup_update08" xml:space="preserve">
+    <value>Please unplug the USB cable
+connected to the device and then plug it back in</value>
+    <comment>11.Popup_Device_Update_08</comment>
+  </data>
+  <data name="StrPopup_update09" xml:space="preserve">
+    <value>Update JPL Gateway</value>
+    <comment>11.Popup_Device_Update_09</comment>
+  </data>
+  <data name="StrPopup_update10" xml:space="preserve">
+    <value>Once Software is updated it cannot be returned to the previous version.
+This update includes the following features;</value>
+    <comment>11.Popup_Device_Update_10</comment>
+  </data>
+  <data name="StrPopup_update11" xml:space="preserve">
+    <value>Would you like to proceed with the JPL Gateway update?</value>
+    <comment>11.Popup_Device_Update_11</comment>
+  </data>
+  <data name="StrProduct01" xml:space="preserve">
+    <value>Speakerphones</value>
+    <comment>08.Product_Page_01</comment>
+  </data>
+  <data name="StrProduct02" xml:space="preserve">
+    <value>Wired Headsets</value>
+    <comment>08.Product_Page_02</comment>
+  </data>
+  <data name="StrProduct03" xml:space="preserve">
+    <value>Accessories</value>
+    <comment>08.Product_Page_03</comment>
+  </data>
+  <data name="StrProduct04" xml:space="preserve">
+    <value>Wireless Headsets</value>
+    <comment>08.Product_Page_04</comment>
+  </data>
+  <data name="StrProduct05" xml:space="preserve">
+    <value>Bottom Leads</value>
+    <comment>08.Product_Page_05</comment>
+  </data>
+  <data name="StrProduct06" xml:space="preserve">
+    <value>Video Conferencing</value>
+    <comment>08.Product_Page_06</comment>
+  </data>
+  <data name="StrProduct07" xml:space="preserve">
+    <value>AV Cables</value>
+    <comment>08.Product_Page_07</comment>
+  </data>
+  <data name="StrSetting01" xml:space="preserve">
+    <value>Settings</value>
+    <comment>07.Settings_Page_01</comment>
+  </data>
+  <data name="StrSetting02" xml:space="preserve">
+    <value>General Settings</value>
+    <comment>07.Settings_Page_02</comment>
+  </data>
+  <data name="StrSetting03" xml:space="preserve">
+    <value>Language</value>
+    <comment>07.Settings_Page_03</comment>
+  </data>
+  <data name="StrSetting04" xml:space="preserve">
+    <value>Country</value>
+    <comment>07.Settings_Page_04</comment>
+  </data>
+  <data name="StrSetting05" xml:space="preserve">
+    <value>Notifications</value>
+    <comment>07.Settings_Page_05</comment>
+  </data>
+  <data name="StrSetting06" xml:space="preserve">
+    <value>Allow push notifications</value>
+    <comment>07.Settings_Page_06</comment>
+  </data>
+  <data name="StrSetting07" xml:space="preserve">
+    <value>Launch JPL Gateway on startup</value>
+    <comment>07.Settings_Page_07</comment>
+  </data>
+  <data name="StrSetting08" xml:space="preserve">
+    <value>Allow JPL Gateway to start up automatically upon login</value>
+    <comment>07.Settings_Page_08</comment>
+  </data>
+  <data name="StrSetting09" xml:space="preserve">
+    <value>Gateway Firmware</value>
+    <comment>07.Settings_Page_09</comment>
+  </data>
+  <data name="StrSetting10" xml:space="preserve">
+    <value>Newest Version</value>
+    <comment>07.Settings_Page_10</comment>
+  </data>
+  <data name="StrSetting11" xml:space="preserve">
+    <value>Current Version</value>
+    <comment>07.Settings_Page_11</comment>
+  </data>
+  <data name="StrSupport01" xml:space="preserve">
+    <value>FAQ</value>
+    <comment>05.Support_Page_01</comment>
+  </data>
+  <data name="StrSupport02" xml:space="preserve">
+    <value>TroubleShooting</value>
+    <comment>05.Support_Page_02</comment>
+  </data>
+  <data name="StrSupport03" xml:space="preserve">
+    <value>Where to Buy</value>
+    <comment>05.Support_Page_03</comment>
+  </data>
+  <data name="StrSupport04" xml:space="preserve">
+    <value>Compatibility</value>
+    <comment>05.Support_Page_04</comment>
+  </data>
+  <data name="StrSupport05" xml:space="preserve">
+    <value>Contact Us</value>
+    <comment>05.Support_Page_05</comment>
+  </data>
+  <data name="StrSupport06" xml:space="preserve">
+    <value>Warranty Registration</value>
+    <comment>05.Support_Page_06</comment>
+  </data>
+  <data name="StrTrouble01" xml:space="preserve">
+    <value>Troubleshooting</value>
+    <comment>06.Trouble_Page_01</comment>
+  </data>
+  <data name="StrTrouble02" xml:space="preserve">
+    <value>Audio Test</value>
+    <comment>06.Trouble_Page_02</comment>
+  </data>
+  <data name="StrTrouble03" xml:space="preserve">
+    <value>Speaker</value>
+    <comment>06.Trouble_Page_03</comment>
+  </data>
+  <data name="StrTrouble04" xml:space="preserve">
+    <value>Speaker Test</value>
+    <comment>06.Trouble_Page_04</comment>
+  </data>
+  <data name="StrTrouble05" xml:space="preserve">
+    <value>Speaker Volume :</value>
+    <comment>06.Trouble_Page_05</comment>
+  </data>
+  <data name="StrTrouble06" xml:space="preserve">
+    <value>Microphone</value>
+    <comment>06.Trouble_Page_06</comment>
+  </data>
+  <data name="StrTrouble07" xml:space="preserve">
+    <value>Microphone Test</value>
+    <comment>06.Trouble_Page_07</comment>
+  </data>
+  <data name="StrTrouble08" xml:space="preserve">
+    <value>Microphone Volume :</value>
+    <comment>06.Trouble_Page_08</comment>
+  </data>
+  <data name="StrTrouble09" xml:space="preserve">
+    <value>Recording…</value>
+    <comment>06.Trouble_Page_09</comment>
+  </data>
+  <data name="StrTrouble10" xml:space="preserve">
+    <value>Playback…</value>
+    <comment>06.Trouble_Page_10</comment>
+  </data>
+  <data name="StrTrouble11" xml:space="preserve">
+    <value>Playing…</value>
+    <comment>06.Trouble_Page_11</comment>
+  </data>
+  <data name="StrTrouble12" xml:space="preserve">
+    <value>Check for audio device.</value>
+    <comment>06.Trouble_Page_12</comment>
+  </data>
+  <data name="StrTrouble13" xml:space="preserve">
+    <value>OK</value>
+    <comment>06.Trouble_Page_13</comment>
+  </data>
+</root>

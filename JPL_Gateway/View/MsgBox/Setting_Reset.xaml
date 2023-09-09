@@ -1,0 +1,60 @@
+﻿<Page x:Class="JPL_Gateway.View.MsgBox.Setting_Reset"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:JPL_Gateway.View.MsgBox"
+      mc:Ignorable="d" 
+      d:DesignHeight="320" d:DesignWidth="520"
+      Title="">
+
+    <Border x:Name="MainBorder" Margin="10" CornerRadius="8" BorderThickness="0" BorderBrush="Black" Padding="0" >
+        <Border.Triggers>
+            <EventTrigger RoutedEvent="Window.Loaded">
+                <BeginStoryboard>
+                    <Storyboard>
+                        <DoubleAnimation Storyboard.TargetName="MainBorder" Storyboard.TargetProperty="Opacity" From="0" To="1" Duration="0:0:0.5"/>
+                    </Storyboard>
+                </BeginStoryboard>
+            </EventTrigger>
+        </Border.Triggers>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="300"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="500"/>
+            </Grid.ColumnDefinitions>
+            <Border Name="Mask" CornerRadius="8" Background="White" />
+            <Grid x:Name="Grid" Background="White">
+                <Grid.OpacityMask>
+                    <VisualBrush Visual="{Binding ElementName=Mask}"/>
+                </Grid.OpacityMask>
+                <StackPanel Name="StackPanel" >
+                    <DockPanel Name="ContentHost" Margin="0,20,0,0" Height="34" >
+                        <Image Source="/JPL_Gateway;component/Resources/Reset.png" Width="32"/>
+                    </DockPanel>
+                    <DockPanel Margin="0,30,0,0" Height="30">
+                        <Viewbox Stretch="Uniform" StretchDirection="DownOnly">
+                            <TextBlock Text="{Binding Path=StrPopup_reset01, Source={StaticResource Resources}}" FontSize="25" FontWeight="Bold" FontFamily="/JPL_Gateway;component/Font/#Source Sans Pro" TextAlignment="Center" Width="492"/>
+                        </Viewbox>
+                    </DockPanel>
+                    <DockPanel Margin="0,0,0,0" Height="25">
+                        <Viewbox Stretch="Uniform" StretchDirection="DownOnly">
+                            <TextBlock Text="{Binding Path=StrPopup_reset02, Source={StaticResource Resources}}" FontSize="20" FontFamily="/JPL_Gateway;component/Font/#Source Sans Pro" TextAlignment="Center" Width="492"/>
+                        </Viewbox>
+                    </DockPanel>
+                    <DockPanel Margin="0,15,0,0" Height="75">
+                        <Viewbox Stretch="Uniform" StretchDirection="DownOnly">
+                            <TextBlock Text="{Binding Path=StrPopup_reset03, Source={StaticResource Resources}}" FontSize="16" FontFamily="/JPL_Gateway;component/Font/#Source Sans Pro" TextAlignment="Center" Width="492"/>
+                        </Viewbox>
+                    </DockPanel>
+                    <DockPanel Name="ButtonHost" HorizontalAlignment="Center" Margin="0,20,0,0" Width="400" >
+                        <Button x:Name="cancelBtn" Content="{Binding Path=StrPopup_reset04, Source={StaticResource Resources}}" Style="{StaticResource Apply_Button}" Margin="0,0,0,0" Click="cancelBtn_Click" Width="130" Height="36" FontSize="15" FontFamily="/JPL_Gateway;component/Font/#Source Sans Pro"/>
+                        <Button x:Name="resetBtn" Content="{Binding Path=StrPopup_reset05, Source={StaticResource Resources}}" Style="{StaticResource Apply_Button}" Margin="0,0,-140,0" Click="resetBtn_Click" Width="130" Height="36" FontSize="15" FontFamily="/JPL_Gateway;component/Font/#Source Sans Pro"/>
+                    </DockPanel>
+                </StackPanel>
+            </Grid>
+        </Grid>
+    </Border>
+</Page>

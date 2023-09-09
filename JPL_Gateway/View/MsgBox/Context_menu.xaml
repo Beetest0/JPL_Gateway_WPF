@@ -1,0 +1,107 @@
+﻿<Page x:Class="JPL_Gateway.View.MsgBox.Context_menu"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:JPL_Gateway.View.MsgBox"
+      mc:Ignorable="d" 
+      Title="Context_menu">
+
+    <Page.Resources>
+        <Style x:Key="MainMenuitem" TargetType="MenuItem">
+            <Setter Property="Height" Value="35"/>
+            <Setter Property="Width" Value="250"/>
+            <Setter Property="Foreground" Value="WhiteSmoke"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type MenuItem}" >
+                        <Border x:Name="Border" Padding="35,10,10,5" BorderThickness="0" Margin="2,0,2,0">
+                            <ContentPresenter ContentSource="Header" x:Name="HeaderHost" RecognizesAccessKey="True"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsHighlighted" Value="true">
+                                <Setter Property="Background" TargetName="Border" Value="#4C4C4C"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="SubMenuitem" TargetType="MenuItem">
+            <Setter Property="Height" Value="35"/>
+            <Setter Property="Width" Value="200"/>
+            <Setter Property="Foreground" Value="WhiteSmoke"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type MenuItem}" >
+                        <Border x:Name="Border" Padding="35,10,10,5" BorderThickness="0" Margin="2,0,2,0">
+                            <ContentPresenter ContentSource="Header" x:Name="HeaderHost" RecognizesAccessKey="True"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsHighlighted" Value="true">
+                                <Setter Property="Background" TargetName="Border" Value="#4C4C4C"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="SubMenuParentitem" TargetType="MenuItem">
+            <Setter Property="Height" Value="35"/>
+            <Setter Property="Width" Value="250"/>
+            <Setter Property="Foreground" Value="WhiteSmoke"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type MenuItem}" >
+                        <Border x:Name="Border" Padding="35,10,10,5" BorderThickness="0" Margin="2,0,2,0">
+                            <Grid VerticalAlignment="Center">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+                                <ContentPresenter ContentSource="Header" x:Name="HeaderHost" RecognizesAccessKey="True"/>
+                                <Path Name="SelectedArrow" Data="M 0 12 L 6 6 L 0 0" Stroke="White" Margin="190,0,0,0"  />
+                            </Grid>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsHighlighted" Value="true">
+                                <Setter Property="Background" TargetName="Border" Value="#4C4C4C"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="Popup" TargetType="{x:Type Popup}">
+            <Setter Property="IsOpen" Value="True" />
+            <Style.Triggers>
+                <MultiDataTrigger>
+                    <MultiDataTrigger.Conditions>
+                        <Condition Binding="{Binding RelativeSource={RelativeSource Self},Path=PlacementTarget.IsMouseOver}" Value="False" />
+                        <Condition Binding="{Binding RelativeSource={RelativeSource Self},Path=IsMouseOver}" Value="False" />
+                    </MultiDataTrigger.Conditions>
+                    <Setter Property="IsOpen" Value="False" />
+                </MultiDataTrigger>
+            </Style.Triggers>
+        </Style>
+    </Page.Resources>
+
+    <StackPanel Background="#333333" >
+        <Line Margin="3"/>
+        <MenuItem Name="Open" Header="Open My Cool App" FontWeight="Bold" Style="{StaticResource MainMenuitem}"/>
+        <Separator Width="240" Height="0.5" />
+        <MenuItem Name="Options" Header="Options" Style="{StaticResource SubMenuParentitem}"/>
+        <MenuItem Name="Exit" Header="Exit" Style="{StaticResource MainMenuitem}"/>
+        <Line Margin="3"/>
+        <Popup Name="Popup" PopupAnimation="Fade" Focusable="True" Placement="Left" PlacementTarget="{Binding ElementName=Options}" Style="{StaticResource Popup}" HorizontalOffset="-5">
+            <Border Background="#333333" BorderBrush="White" BorderThickness="0.9">
+                <StackPanel >
+                    <Line Margin="3"/>
+                    <MenuItem Name="ChangeColour" Header="Change Colour" Style="{StaticResource SubMenuitem}"/>
+                    <MenuItem Name="ChangeSize" Header="Change Size" Style="{StaticResource SubMenuitem}"/>
+                    <Line Margin="3"/>
+                </StackPanel>
+            </Border>
+        </Popup>
+    </StackPanel>
+</Page>

@@ -1,0 +1,89 @@
+﻿<Page x:Class="JPL_Gateway.View.Support_Page"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:JPL_Gateway.View"
+      UseLayoutRounding="True"
+      mc:Ignorable="d" 
+      d:DesignHeight="650" d:DesignWidth="920"
+      Title="" KeyboardNavigation.TabNavigation="None">
+    <Page.Background>
+        <ImageBrush ImageSource="/JPL_Gateway;component/Resources/Watermark.png" Stretch="UniformToFill"/>
+    </Page.Background>
+
+    <Grid>
+        <Button x:Name="Troubleshooting" Margin="70,126,0,0" Style="{StaticResource ScaleButton}" Content="" Height="130" VerticalAlignment="Top" Focusable="False" Click="Troubleshooting_Click" HorizontalAlignment="Left" Width="130">
+            <Button.Background>
+                <ImageBrush ImageSource="/JPL_Gateway;component/Resources/Button_Icon/Troubleshoot_DB.png"/>
+            </Button.Background>
+        </Button>
+
+        <Grid HorizontalAlignment="Left" Height="25"  VerticalAlignment="Top" Width="220" Margin="25,281,0,0">
+            <Viewbox Stretch="Uniform" StretchDirection="DownOnly">
+                <TextBlock Text="{Binding Path=StrSupport02, Source={StaticResource Resources}}" TextAlignment="Center" MinWidth="220" FontFamily="/JPL_Gateway;component/Font/#Source Sans Pro" FontSize="18" Foreground="#0C2340"/>
+            </Viewbox>
+        </Grid>
+
+        <Button x:Name="FAQ" Width="130" Height="130" Margin="720,126,0,0" Style="{StaticResource ScaleButton}" Content="" VerticalAlignment="Top" Focusable="False" Click="FAQ_Click" HorizontalAlignment="Left">
+            <Button.Background>
+                <ImageBrush ImageSource="/JPL_Gateway;component/Resources/Button_Icon/FAQ_DB.png"/>
+            </Button.Background>
+        </Button>
+
+        <Grid HorizontalAlignment="Left" Height="25"  VerticalAlignment="Top" Width="220" Margin="675,281,0,0">
+            <Viewbox Stretch="Uniform" StretchDirection="DownOnly">
+                <TextBlock Text="{Binding Path=StrSupport01, Source={StaticResource Resources}}" TextAlignment="Center" MinWidth="220" FontFamily="/JPL_Gateway;component/Font/#Source Sans Pro" FontSize="18" Foreground="#0C2340"/>
+            </Viewbox>
+        </Grid>
+
+        <Button x:Name="Compatibility" Width="130" Height="130" Margin="395,126,0,0" Style="{StaticResource ScaleButton}" Content="" VerticalAlignment="Top" Focusable="False" Click="Compatibility_Click" HorizontalAlignment="Left">
+            <Button.Background>
+                <ImageBrush ImageSource="/JPL_Gateway;component/Resources/Button_Icon/Compatibility_DB.png"/>
+            </Button.Background>
+        </Button>
+
+        <Button x:Name="Warranty" Width="130" Height="130" Margin="720,333,0,0" Style="{StaticResource ScaleButton}" Content="" VerticalAlignment="Top" Focusable="False" Click="Warranty_Click" HorizontalAlignment="Left">
+            <Button.Background>
+                <ImageBrush ImageSource="/JPL_Gateway;component/Resources/Button_Icon/Warranty_DB.png"/>
+            </Button.Background>
+        </Button>
+
+        <Grid HorizontalAlignment="Left" Height="25"  VerticalAlignment="Top" Width="220" Margin="349,281,0,0">
+            <Viewbox Stretch="Uniform" StretchDirection="DownOnly">
+                <TextBlock Text="{Binding Path=StrSupport04, Source={StaticResource Resources}}" TextAlignment="Center" MinWidth="220" FontFamily="/JPL_Gateway;component/Font/#Source Sans Pro" FontSize="18" Foreground="#0C2340"/>
+            </Viewbox>
+        </Grid>
+
+        <Grid HorizontalAlignment="Left" Height="25"  VerticalAlignment="Top" Width="220" Margin="675,488,0,0">
+            <Viewbox Stretch="Uniform" StretchDirection="DownOnly">
+                <TextBlock Text="{Binding Path=StrSupport06, Source={StaticResource Resources}}" TextAlignment="Center" MinWidth="220" FontFamily="/JPL_Gateway;component/Font/#Source Sans Pro" FontSize="18" Foreground="#0C2340"/>
+            </Viewbox>
+        </Grid>
+
+        <Button x:Name="Contact_Us" Height="130" Margin="395,333,0,0" Style="{StaticResource ScaleButton}" Content="" VerticalAlignment="Top" Click="Contact_Us_Click" Focusable="False" HorizontalAlignment="Left" Width="130">
+            <Button.Background>
+                <ImageBrush ImageSource="/JPL_Gateway;component/Resources/Button_Icon/Contact_us_DB.png"/>
+            </Button.Background>
+        </Button>
+
+        <Grid HorizontalAlignment="Left" Height="25"  VerticalAlignment="Top" Width="220" Margin="349,488,0,0">
+            <Viewbox Stretch="Uniform" StretchDirection="DownOnly">
+                <TextBlock Text="{Binding Path=StrSupport05, Source={StaticResource Resources}}" TextAlignment="Center" MinWidth="220" FontFamily="/JPL_Gateway;component/Font/#Source Sans Pro" FontSize="18" Foreground="#0C2340"/>
+            </Viewbox>
+        </Grid>
+
+        <Button x:Name="Where_to_buy" Width="130" Height="130" Margin="70,333,0,0" Style="{StaticResource ScaleButton}" Content="" VerticalAlignment="Top" HorizontalAlignment="Left" Focusable="False" Click="Where_to_buy_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/JPL_Gateway;component/Resources/Button_Icon/Where_to_buy_DB.png"/>
+            </Button.Background>
+        </Button>
+
+        <Grid HorizontalAlignment="Left" Height="25"  VerticalAlignment="Top" Width="220" Margin="25
+              ,488,0,0">
+            <Viewbox Stretch="Uniform" StretchDirection="DownOnly">
+                <TextBlock Text="{Binding Path=StrSupport03, Source={StaticResource Resources}}" TextAlignment="Center" MinWidth="220" FontFamily="/JPL_Gateway;component/Font/#Source Sans Pro" FontSize="18" Foreground="#0C2340"/>
+            </Viewbox>
+        </Grid>
+    </Grid>
+</Page>

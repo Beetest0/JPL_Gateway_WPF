@@ -1,0 +1,24 @@
+﻿<Page x:Class="JPL_Gateway.View.Nodevice_Page"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:JPL_Gateway.View"
+      UseLayoutRounding="True"
+      mc:Ignorable="d" 
+      d:DesignHeight="650" d:DesignWidth="920"
+      Title="" KeyboardNavigation.TabNavigation="None">
+    <Page.Background>
+        <ImageBrush ImageSource="/JPL_Gateway;component/Resources/Watermark.png" Stretch="UniformToFill"/>
+    </Page.Background>
+
+    <Grid>
+        <Image Height="150" Margin="385,216,385,0" Focusable="False" Source="/JPL_Gateway;component/Resources/Button_Icon/No_Device.png" VerticalAlignment="Top"/>
+
+        <Grid HorizontalAlignment="Left" Height="60"  VerticalAlignment="Top" Width="400" Margin="260,379,0,0">
+            <Viewbox Stretch="Uniform" StretchDirection="DownOnly" VerticalAlignment="Top">
+                <TextBlock Text="{Binding Path=StrMain05, Source={StaticResource Resources}}" MinWidth="400" TextAlignment="Center" FontFamily="/JPL_Gateway;component/Font/#Source Sans Pro" Foreground="#0C2340" FontSize="25"/>
+            </Viewbox>
+        </Grid>
+    </Grid>
+</Page>

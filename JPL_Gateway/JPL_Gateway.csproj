@@ -1,0 +1,607 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{16F575E4-BC21-4A3C-944A-7869A7F67554}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>JPL_Gateway</RootNamespace>
+    <AssemblyName>JPL_Gateway</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <PublishUrl>게시\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>JPL_Gateway.App</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>JPL_icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <PlatformTarget>x64</PlatformTarget>
+    <OutputPath>bin\x86\Release\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <PlatformTarget>x64</PlatformTarget>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <PlatformTarget>x64</PlatformTarget>
+    <OutputPath>bin\x64\Release\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AxInterop.WMPLib">
+      <HintPath>.\AxInterop.WMPLib.dll</HintPath>
+    </Reference>
+    <Reference Include="FreeMateSoftPhone">
+      <HintPath>..\FreeMateSoftPhone\bin\Debug\FreeMateSoftPhone.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.WMPLib">
+      <HintPath>.\Interop.WMPLib.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Expression.Interactions">
+      <HintPath>.\Microsoft.Expression.Interactions.dll</HintPath>
+    </Reference>
+    <Reference Include="NAudio, Version=1.10.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\NAudio.1.10.0\lib\net35\NAudio.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp, Version=106.11.4.0, Culture=neutral, PublicKeyToken=598062e77f915f75, processorArchitecture=MSIL">
+      <HintPath>..\packages\RestSharp.106.11.4\lib\net452\RestSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.0\lib\netstandard1.1\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.3\lib\netstandard1.1\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.4.0\lib\portable-net45+win8+wp8+wpa81\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.5.0.0\lib\net45\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encodings.Web, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encodings.Web.5.0.0\lib\netstandard1.0\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.3\lib\portable-net45+win8+wp8+wpa81\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.4.0\lib\netstandard1.0\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Core">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="WindowsBase">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PresentationCore">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PresentationFramework">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="WindowsFormsIntegration" />
+    <Reference Include="WmpFormsLib">
+      <HintPath>.\WmpFormsLib.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="AppConfiguration.cs" />
+    <Compile Include="Cultures\CultureResources.cs" />
+    <Compile Include="Cultures\Resources.de-DE.Designer.cs">
+      <DependentUpon>Resources.de-DE.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Cultures\Resources.fr-FR.Designer.cs">
+      <DependentUpon>Resources.fr-FR.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Cultures\Resources.es-ES.Designer.cs">
+      <DependentUpon>Resources.es-ES.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Cultures\Resources.en-GB.Designer.cs">
+      <DependentUpon>Resources.en-GB.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Cultures\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="HIDInterface.cs" />
+    <Compile Include="Softphoneitem.cs" />
+    <Compile Include="Softphone\CustomKey.cs" />
+    <Compile Include="Softphone\NativeMethods.cs" />
+    <Compile Include="UpdateService.cs" />
+    <Compile Include="UpdateSoftphone.cs" />
+    <Compile Include="UsbNotification.cs" />
+    <Compile Include="View\Connected_Page.xaml.cs">
+      <DependentUpon>Connected_Page.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Contact_us_Page.xaml.cs">
+      <DependentUpon>Contact_us_Page.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Device_settings_Page.xaml.cs">
+      <DependentUpon>Device_settings_Page.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Device_update_Page.xaml.cs">
+      <DependentUpon>Device_update_Page.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\MsgBox\Context_menu.xaml.cs">
+      <DependentUpon>Context_menu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\MsgBox\FW_Upgrade.xaml.cs">
+      <DependentUpon>FW_Upgrade.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\MsgBox\Mail.xaml.cs">
+      <DependentUpon>Mail.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\MsgBox\Setting_Reset.xaml.cs">
+      <DependentUpon>Setting_Reset.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\MsgBox\SW_Upgrade.xaml.cs">
+      <DependentUpon>SW_Upgrade.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\MsgBox\Upgrade.xaml.cs">
+      <DependentUpon>Upgrade.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\MsgBox\Warning_Msg.xaml.cs">
+      <DependentUpon>Warning_Msg.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Nodevice_Page.xaml.cs">
+      <DependentUpon>Nodevice_Page.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Products_Page.xaml.cs">
+      <DependentUpon>Products_Page.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Select_device_Page.xaml.cs">
+      <DependentUpon>Select_device_Page.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Settings_Page.xaml.cs">
+      <DependentUpon>Settings_Page.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\SplashScreen_Page.xaml.cs">
+      <DependentUpon>SplashScreen_Page.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Support_Page.xaml.cs">
+      <DependentUpon>Support_Page.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Test_Page1.xaml.cs">
+      <DependentUpon>Test_Page1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Trouble_Page.xaml.cs">
+      <DependentUpon>Trouble_Page.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Updates_Page.xaml.cs">
+      <DependentUpon>Updates_Page.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WindowMethods.cs" />
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="View\Connected_Page.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Contact_us_Page.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Device_settings_Page.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Device_update_Page.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\MsgBox\Context_menu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\MsgBox\FW_Upgrade.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\MsgBox\Mail.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\MsgBox\Setting_Reset.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\MsgBox\SW_Upgrade.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\MsgBox\Upgrade.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\MsgBox\Warning_Msg.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Nodevice_Page.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Products_Page.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Select_device_Page.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Settings_Page.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\SplashScreen_Page.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Support_Page.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Test_Page1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Trouble_Page.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Updates_Page.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>PublicSettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Resource Include="Resources\Font\SourceSansPro-Regular.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\KOR.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\UK.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Device\JPL-Explore.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Button_Icon\Device_DB.png" />
+    <Resource Include="Resources\Button_Icon\Settings_DB.png" />
+    <Resource Include="Resources\Button_Icon\Support_DB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Button_Icon\FAQ_DB.png" />
+    <Resource Include="Resources\Button_Icon\Troubleshoot_DB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Button_Icon\Compatibility_DB.png" />
+    <Resource Include="Resources\Button_Icon\Contact_us_DB.png" />
+    <Resource Include="Resources\Button_Icon\Where_to_buy_DB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Button_Icon\Device_Settings_DB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Button_Icon\Device_Updates_DB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Button_Icon\Padlock_DB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Device\Adapt20.png" />
+    <Resource Include="Resources\Device\BL-05.png" />
+    <Resource Include="Resources\Device\BL-053.png" />
+    <Resource Include="Resources\Device\BL-055.png" />
+    <Resource Include="Resources\Device\BL-056.png" />
+    <Resource Include="Resources\Device\BL-11.png" />
+    <Resource Include="Resources\Device\BT-220.png" />
+    <Resource Include="Resources\Device\BT-700Q.png" />
+    <Resource Include="Resources\Device\BT200.png" />
+    <Resource Include="Resources\Device\BTD1000.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Device\DH036T.png" />
+    <Resource Include="Resources\Device\DH037T.png" />
+    <Resource Include="Resources\Device\DH039T.png" />
+    <Resource Include="Resources\Device\DSU-08M.png" />
+    <Resource Include="Resources\Device\DSU-09M.png" />
+    <Resource Include="Resources\Device\DSU-09M_.png" />
+    <Resource Include="Resources\Device\DSU-10M.png" />
+    <Resource Include="Resources\Device\DSU-10MBL-053.png" />
+    <Resource Include="Resources\Device\DSU-11M.png" />
+    <Resource Include="Resources\Device\DSU-11MBL-054MS.png" />
+    <Resource Include="Resources\Device\DSU-15M.png" />
+    <Resource Include="Resources\Device\DSU-20.png" />
+    <Resource Include="Resources\Device\DW-779U.png" />
+    <Resource Include="Resources\Device\DW-779U1.png" />
+    <Resource Include="Resources\Device\DW-800U.png" />
+    <Resource Include="Resources\Device\DW-800X500.png" />
+    <Resource Include="Resources\Device\DW780.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Device\JPL-400-USB.png" />
+    <Resource Include="Resources\Device\JPL-611-IB.png" />
+    <Resource Include="Resources\Device\JPL-Connect-2.png" />
+    <Resource Include="Resources\Device\JPL400B.png" />
+    <Resource Include="Resources\Device\JPL400M.png" />
+    <Resource Include="Resources\Device\LYNC.png" />
+    <Resource Include="Resources\Device\Lync_new.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Device\VoicePro-575.png" />
+    <Resource Include="Resources\Device\voicepro575.png" />
+    <Resource Include="Resources\Device\X450.png" />
+    <Resource Include="Resources\Device\x500U.png" />
+    <Resource Include="Resources\Device\X500_01.png" />
+    <Resource Include="Resources\Device\X500_Base_with_USB_Module.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Device\NOUSB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Button_Icon\Updates_DB_Small.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\JPL_Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Button_Icon\Email_DB.png" />
+    <Resource Include="Resources\Button_Icon\Phone_DB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Device\BT500D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Device\No_Image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\JPL_icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Button_Icon\Check.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Watermark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Reset.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Button_Icon\No_Device.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Updates.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Button_Icon\Products_DB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Products\Accessories.png" />
+    <Resource Include="Resources\Products\AV_Cables.png" />
+    <Resource Include="Resources\Products\Bottom_leads.png" />
+    <Resource Include="Resources\Products\Speakerphones.png" />
+    <Resource Include="Resources\Products\Video_conferencing.png" />
+    <Resource Include="Resources\Products\Wired_headsets.png" />
+    <Resource Include="Resources\Products\Wireless_headsets.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Cultures\Resources.de-DE.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.de-DE.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cultures\Resources.fr-FR.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.fr-FR.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cultures\Resources.es-ES.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.es-ES.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cultures\Resources.en-GB.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.en-GB.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cultures\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\JPL_Opening.mp4" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\Support\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Button_Icon\Updates_DB_Small_N.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Analyzer Include="..\MediaPlayer\bin\Debug\AxInterop.WMPLib.dll" />
+    <Analyzer Include="..\MediaPlayer\bin\Debug\Interop.WMPLib.dll" />
+    <Analyzer Include="..\MediaPlayer\bin\Debug\WmpFormsLib.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\DE.png" />
+    <Resource Include="Resources\FR.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\ES.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Title\JPL_Icon.png" />
+    <Resource Include="Resources\Title\Logo_Bar.png" />
+    <Resource Include="Resources\Title\Logo_Bar_Crop.png" />
+    <Resource Include="Resources\Title\Logo_Bar_Fill.png" />
+    <Resource Include="Resources\Title\Logo_Circle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Title\Queens_award.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Title\New_JPL_Icon50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Title\New_JPL_Icon75.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Device\EHS-USB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Button_Icon\Warranty_DB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Button_Icon\Updates_DB_Small30.png" />
+    <Resource Include="Resources\Button_Icon\Updates_DB_Small30_N.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Device\Commander.png" />
+    <Resource Include="Resources\Device\JPL-Scout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="JPL_icon.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\System.Text.Json.6.0.5\build\System.Text.Json.targets" Condition="Exists('..\packages\System.Text.Json.6.0.5\build\System.Text.Json.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>이 프로젝트는 이 컴퓨터에 없는 NuGet 패키지를 참조합니다. 해당 패키지를 다운로드하려면 NuGet 패키지 복원을 사용하십시오. 자세한 내용은 http://go.microsoft.com/fwlink/?LinkID=322105를 참조하십시오. 누락된 파일은 {0}입니다.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\System.Text.Json.6.0.5\build\System.Text.Json.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\System.Text.Json.6.0.5\build\System.Text.Json.targets'))" />
+  </Target>
+</Project>

@@ -1,0 +1,75 @@
+;
+; (c) Copyright 2009 C-Media
+;
+
+[Version]
+Signature="$Windows NT$"
+Class=USB
+ClassGUID={36FC9E60-C465-11CF-8056-444553540000}
+Provider=%MSFT%
+DriverVer=07/02/2014,5.12.0.0002
+CatalogFile=FPGATEST.cat
+
+
+[SourceDisksNames]
+1=%Disk_Description%,,,
+
+[SourceDisksFiles.x86]
+FPGATEST.sys = 1,\x86
+
+[SourceDisksFiles.amd64]
+FPGATEST.sys = 1,\x64
+
+[Manufacturer]
+%MfgName%=CMedia,NTamd64
+
+[CMedia]
+%USB\VID_0D8C&PID_5200.DeviceDesc%=FPGATEST.Dev, USB\VID_0d8c&PID_5200
+%USB\VID_0D8C&PID_5200.DeviceDesc%=FPGATEST.Dev, USB\VID_0d8c&PID_0018
+
+[CMedia.NTamd64]
+%USB\VID_0D8C&PID_5200.DeviceDesc%=FPGATEST.Dev, USB\VID_0d8c&PID_5200
+%USB\VID_0D8C&PID_5200.DeviceDesc%=FPGATEST.Dev, USB\VID_0d8c&PID_0018
+	
+[DestinationDirs]
+FPGATEST.Files.Ext = 10,System32\Drivers
+
+[FPGATEST.Dev.NTX86]
+CopyFiles=FPGATEST.Files.Ext
+
+[FPGATEST.Dev.NTX86.Services]
+Addservice = FPGATEST, 0x00000002, FPGATEST.AddService
+
+[FPGATEST.Dev.NTAMD64]
+CopyFiles=FPGATEST.Files.Ext
+
+[FPGATEST.Dev.NTAMD64.Services]
+Addservice = FPGATEST, 0x00000002, FPGATEST.AddService
+
+[FPGATEST.AddService]
+DisplayName    = %FPGATEST.SvcDesc%
+ServiceType    = 1                  ; SERVICE_KERNEL_DRIVER
+StartType      = 3                  ; SERVICE_DEMAND_START
+ErrorControl   = 1                  ; SERVICE_ERROR_NORMAL
+ServiceBinary  = %10%\System32\Drivers\FPGATEST.SYS
+AddReg         = FPGATEST.AddReg
+LoadOrderGroup = Base
+
+[FPGATEST.AddReg]
+HKR,,DevLoader,,*ntkern
+HKR,,NTMPDriver,,FPGATEST.SYS
+HKR,"Parameters","MaximumTransferSize",0x10001,256
+HKR,"Parameters","DebugLevel",0x10001,2
+HKR,"Parameters","FPGATESTEnable",0x10001,1
+
+[FPGATEST.Files.Ext]
+FPGATEST.SYS
+
+;---------------------------------------------------------------;
+
+[Strings]
+MSFT="C-Media"
+Disk_Description="Usb Audio Class 1.1 Test Installation Disk"
+MfgName="C-Media"
+USB\VID_0D8C&PID_5200.DeviceDesc="Usb Audio Class 1.1 Test"
+FPGATEST.SvcDesc="FPGATEST.SYS Usb Audio Class 1.1 Test Driver"

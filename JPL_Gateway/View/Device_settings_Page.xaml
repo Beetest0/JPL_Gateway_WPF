@@ -1,0 +1,483 @@
+﻿<Page x:Class="JPL_Gateway.View.Device_settings_Page"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:JPL_Gateway.View"
+      UseLayoutRounding="True"
+      mc:Ignorable="d" 
+      d:DesignHeight="650" d:DesignWidth="920"
+      Title="" KeyboardNavigation.TabNavigation="None">
+    <Page.Background>
+        <ImageBrush ImageSource="/JPL_Gateway;component/Resources/Watermark.png" Stretch="UniformToFill"/>
+    </Page.Background>
+
+    <Page.Resources>
+        <SolidColorBrush x:Key="HorizontalSliderTrackNormalBackground" Color="Black"/>
+        <LinearGradientBrush x:Key="HorizontalSliderTrackNormalBorder" EndPoint="0,1" StartPoint="0,0">
+            <GradientStop Color="#FFE7EAEA" Offset="0.1"/>
+            <GradientStop Color="White" Offset="0.5"/>
+        </LinearGradientBrush>
+
+        <Style x:Key="SliderRepeatButtonStyle" TargetType="{x:Type RepeatButton}">
+            <Setter Property="OverridesDefaultStyle" Value="true"/>
+            <Setter Property="IsTabStop" Value="false"/>
+            <Setter Property="Focusable" Value="false"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type RepeatButton}">
+                        <Rectangle Fill="Transparent"/>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="CustomThumbForSlider" TargetType="{x:Type Thumb}">
+            <Setter Property="OverridesDefaultStyle" Value="True"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Thumb}">
+                        <Ellipse Fill="White" Stroke="#FF282259" Height="20" Width="20" Margin="0,-1,0,0"/>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="MyCustomStyleForSlider" TargetType="{x:Type Slider}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Slider}">
+                        <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto" MinHeight="{TemplateBinding MinHeight}"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <TickBar x:Name="TopTick" Visibility="Visible" Fill="Black" Placement="Top" Height="8" Grid.Row="0"/>
+                                <TickBar x:Name="BottomTick" Visibility="Visible" Fill="Black" Placement="Bottom" Height="8" Grid.Row="0"/>
+                                <TickBar x:Name="BothTick" Visibility="Visible" Fill="Black" Placement="Bottom" Height="8" Grid.Row="2"/>
+                                <Border x:Name="TrackBackground"
+                                        Background="{StaticResource HorizontalSliderTrackNormalBackground}"
+                                        BorderBrush="{StaticResource HorizontalSliderTrackNormalBorder}"
+                                        BorderThickness="1" CornerRadius="1"
+                                        Margin="5,0" VerticalAlignment="Center" Height="4.0" Grid.Row="1" >
+                                    <Canvas Margin="-6,-1">
+                                        <Rectangle Visibility="Hidden" x:Name="PART_SelectionRange" Height="4.0"
+                                                   Fill="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"
+                                                   Stroke="{DynamicResource {x:Static SystemColors.ControlDarkDarkBrushKey}}"
+                                                   StrokeThickness="1.0"/>
+                                    </Canvas>
+                                </Border>
+                                <Track x:Name="PART_Track" Grid.Row="1">
+                                    <Track.DecreaseRepeatButton>
+                                        <RepeatButton Style="{StaticResource SliderRepeatButtonStyle}" Command="{x:Static Slider.DecreaseLarge}"/>
+                                    </Track.DecreaseRepeatButton>
+                                    <Track.IncreaseRepeatButton>
+                                        <RepeatButton Style="{StaticResource SliderRepeatButtonStyle}" Command="{x:Static Slider.IncreaseLarge}"/>
+                                    </Track.IncreaseRepeatButton>
+                                    <Track.Thumb>
+                                        <Thumb x:Name="Thumb" Style="{StaticResource CustomThumbForSlider}" Background="Black"/>
+                                    </Track.Thumb>
+                                </Track>
+                            </Grid>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="MyButton" TargetType="Button">
+            <Setter Property="OverridesDefaultStyle" Value="True" />
+            <Setter Property="Cursor" Value="Hand" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Name="border" BorderThickness="0" BorderBrush="Black" Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Opacity" Value="0.8" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="ComboBox" TargetType="{x:Type ComboBox}">
+            <Setter Property="Cursor" Value="Hand" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="ComboBox">
+                        <Grid>
+                            <ToggleButton Grid.Column="2" Focusable="false" IsChecked="{Binding Path=IsDropDownOpen,Mode=TwoWay,RelativeSource={RelativeSource TemplatedParent}}" >
+                                <ToggleButton.Template>
+                                    <ControlTemplate>
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="*" />
+                                                <ColumnDefinition Width="40" />
+                                            </Grid.ColumnDefinitions>
+                                            <Border x:Name="Border"  Grid.ColumnSpan="2" CornerRadius="4" BorderBrush="#0C2340" BorderThickness="2"/>
+                                            <Path x:Name="Arrow" Grid.Column="1"  Fill="#FFBBBBBB" HorizontalAlignment="Center" VerticalAlignment="Center" Data="M 0 0 L 4 4 L 8 0 Z"
+                                                Height="7.667" Margin="10.833,15.333,10.833,13" Width="13.334" Stretch="Fill">
+                                            </Path>
+                                        </Grid>
+                                        <ControlTemplate.Triggers>
+                                            <Trigger Property="ToggleButton.IsMouseOver" Value="true">
+                                                <Setter TargetName="Border" Property="Background" Value="White" />
+                                            </Trigger>
+                                            <Trigger Property="ToggleButton.IsChecked" Value="true">
+                                                <Setter TargetName="Border" Property="Background" Value="White" />
+                                            </Trigger>
+                                        </ControlTemplate.Triggers>
+                                    </ControlTemplate>
+                                </ToggleButton.Template>
+                            </ToggleButton>
+                            <ContentPresenter Name="ContentSite" IsHitTestVisible="False"  Content="{TemplateBinding SelectionBoxItem}" ContentTemplate="{TemplateBinding SelectionBoxItemTemplate}" ContentTemplateSelector="{TemplateBinding ItemTemplateSelector}" Margin="3"  />
+                            <TextBox x:Name="PART_EditableTextBox" Visibility="Hidden" IsReadOnly="{TemplateBinding IsReadOnly}"/>
+                            <Popup Name="Popup" Placement="Bottom" IsOpen="{TemplateBinding IsDropDownOpen}" AllowsTransparency="True"  Focusable="False" PopupAnimation="Slide">
+                                <Grid  Name="DropDown" SnapsToDevicePixels="True" MinWidth="{TemplateBinding ActualWidth}" MaxHeight="{TemplateBinding MaxDropDownHeight}">
+                                    <Border x:Name="DropDownBorder" Background="White" BorderThickness="2" BorderBrush="#0C2340" />
+                                    <ScrollViewer SnapsToDevicePixels="True">
+                                        <StackPanel IsItemsHost="True" />
+                                    </ScrollViewer>
+                                </Grid>
+                            </Popup>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+            </Style.Triggers>
+        </Style>
+    </Page.Resources>
+
+    <Grid>
+        <Button x:Name="backBtn" Height="22" Background="Transparent" Margin="20,8,0,0" Click="backBtn_Click" Focusable="False" VerticalAlignment="Top" HorizontalAlignment="Left" Width="100">
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Setter Property="OverridesDefaultStyle" Value="True" />
+                    <Setter Property="Cursor" Value="Hand" />
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="Button">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="15"></ColumnDefinition>
+                                        <ColumnDefinition Width="30*"></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <Canvas x:Name="btn" Width="20" Height="25" Background="Transparent" Grid.Column="0" RenderTransformOrigin="0.5,0.5">
+                                        <Path x:Name="Line2" Stroke="Gray" StrokeThickness="1" >
+                                            <Path.Data>
+                                                <PathGeometry>
+                                                    <PathGeometry.Figures>
+                                                        <PathFigureCollection>
+                                                            <PathFigure StartPoint="13,0">
+                                                                <LineSegment Point="0,10.5" />
+                                                                <LineSegment Point="13,22" />
+                                                            </PathFigure>
+                                                        </PathFigureCollection>
+                                                    </PathGeometry.Figures>
+                                                </PathGeometry>
+                                            </Path.Data>
+                                        </Path>
+                                        <Canvas.RenderTransform>
+                                            <ScaleTransform />
+                                        </Canvas.RenderTransform>
+                                    </Canvas>
+                                    <Viewbox Grid.Column="1" Stretch="Uniform" StretchDirection="DownOnly">
+                                        <TextBlock Text="{Binding Path=StrDevice01, Source={StaticResource Resources}}" MinWidth="85" FontSize="13" FontFamily="/JPL_Gateway;component/Font/#Source Sans Pro" Foreground="#FFA0A0A0"/>
+                                    </Viewbox>
+                                </Grid>
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Trigger.EnterActions>
+                                            <BeginStoryboard>
+                                                <Storyboard>
+                                                    <DoubleAnimation
+                                Duration="0:0:0.05"
+                                Storyboard.TargetName="btn"
+                                Storyboard.TargetProperty="(RenderTransform).(ScaleTransform.ScaleX)" To="1.1"/>
+                                                    <DoubleAnimation
+                                Duration="0:0:0.05"
+                                Storyboard.TargetName="btn"
+                                Storyboard.TargetProperty="(RenderTransform).(ScaleTransform.ScaleY)" To="1.1"/>
+                                                </Storyboard>
+                                            </BeginStoryboard>
+                                        </Trigger.EnterActions>
+                                        <Trigger.ExitActions>
+                                            <BeginStoryboard>
+                                                <Storyboard>
+                                                    <DoubleAnimation
+                                Duration="0:0:0.05"
+                                Storyboard.TargetName="btn"
+                                Storyboard.TargetProperty="(RenderTransform).(ScaleTransform.ScaleX)"
+                                To="1"/>
+                                                    <DoubleAnimation
+                                Duration="0:0:0.05"
+                                Storyboard.TargetName="btn"
+                                Storyboard.TargetProperty="(RenderTransform).(ScaleTransform.ScaleY)"
+                                To="1"/>
+                                                </Storyboard>
+                                            </BeginStoryboard>
+                                        </Trigger.ExitActions>
+                                    </Trigger>
+                                    <Trigger Property="IsEnabled" Value="False">
+                                        <Setter TargetName="btn" Property="Opacity" Value="0.25"/>
+                                    </Trigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Grid HorizontalAlignment="Left" Height="50"  VerticalAlignment="Top" Width="430" Margin="26,34,0,0">
+            <Viewbox Stretch="Uniform" StretchDirection="DownOnly">
+                <TextBlock Text="{Binding Path=StrDevice_setting01, Source={StaticResource Resources}}" MinWidth="430" FontFamily="/JPL_Gateway;component/Font/#Source Sans Pro" FontSize="35" FontWeight="Bold"/>
+            </Viewbox>
+        </Grid>
+
+        <Grid HorizontalAlignment="Left" Height="50"  VerticalAlignment="Top" Width="700" Margin="26,71,0,0">
+            <Viewbox Stretch="Uniform" StretchDirection="DownOnly">
+                <TextBlock x:Name="DeviceName" Text="No Device" MinWidth="700" FontFamily="/JPL_Gateway;component/Font/#Source Sans Pro" FontSize="25"/>
+            </Viewbox>
+        </Grid>
+
+        <Button Content="{Binding Path=StrDevice_setting02, Source={StaticResource Resources}}" FontFamily="/JPL_Gateway;component/Font/#Source Sans Pro"  Style="{StaticResource Apply_Button}" Width="200" Height="36" Margin="469,20,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Foreground="White" FontSize="15" Focusable="False" Click="Reset_settings_Click"/>
+        <Button Content="{Binding Path=StrDevice_setting03, Source={StaticResource Resources}}" FontFamily="/JPL_Gateway;component/Font/#Source Sans Pro"  Style="{StaticResource Apply_Button}" Width="200" Height="36" Margin="686,20,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Foreground="White" FontSize="15" Focusable="False" Click="Sava_All_Click"/>
+
+        <Grid x:Name="EqGrid" Margin="20,120,0,0" Width="435" Height="350" VerticalAlignment="Top" HorizontalAlignment="Left">
+            <Grid HorizontalAlignment="Left" Height="50"  VerticalAlignment="Top" Width="410" Margin="5,0,0,0">
+                <Viewbox Stretch="Uniform" StretchDirection="DownOnly">
+                    <TextBlock Text="{Binding Path=StrDevice_setting04, Source={StaticResource Resources}}" MinWidth="410" FontFamily="/JPL_Gateway;component/Font/#Source Sans Pro" FontSize="25"/>
+                </Viewbox>
+            </Grid>
+
+            <Grid HorizontalAlignment="Left" Height="25"  VerticalAlignment="Top" Width="130" Margin="5,55,0,0">
+                <Viewbox Stretch="Uniform" StretchDirection="DownOnly">
+                    <TextBlock Text="{Binding Path=StrDevice_setting05, Source={StaticResource Resources}}" MinWidth="130" FontFamily="/JPL_Gateway;component/Font/#Source Sans Pro" FontSize="18"/>
+                </Viewbox>
+            </Grid>
+
+            <ComboBox x:Name="eq_preset" Margin="143,48,0,0" Style="{StaticResource ComboBox}" SelectedIndex="0" VerticalAlignment="Top" Focusable="False" DropDownClosed="EQ_Change" HorizontalAlignment="Left" Width="276">
+                <ComboBoxItem>
+                    <StackPanel Orientation="Horizontal" Height="32">
+                        <TextBlock Text="OFF" Foreground="Black" FontSize="18" Width="266" TextAlignment="Center" VerticalAlignment="Center"/>
+                    </StackPanel>
+                </ComboBoxItem>
+                <ComboBoxItem>
+                    <StackPanel Orientation="Horizontal" Width="266" Height="32">
+                        <TextBlock Text="User" Foreground="Black" FontSize="18" Width="266" TextAlignment="Center" VerticalAlignment="Center"/>
+                    </StackPanel>
+                </ComboBoxItem>
+                <ComboBoxItem>
+                    <StackPanel Orientation="Horizontal" Width="266" Height="32">
+                        <TextBlock Text="Communication" Foreground="Black" FontSize="18" Width="266" TextAlignment="Center" VerticalAlignment="Center"/>
+                    </StackPanel>
+                </ComboBoxItem>
+                <ComboBoxItem>
+                    <StackPanel Orientation="Horizontal" Width="266" Height="32">
+                        <TextBlock Text="Movie" Foreground="Black" FontSize="18" Width="266" TextAlignment="Center" VerticalAlignment="Center"/>
+                    </StackPanel>
+                </ComboBoxItem>
+                <ComboBoxItem>
+                    <StackPanel Orientation="Horizontal" Width="266" Height="32">
+                        <TextBlock Text="Music" Foreground="Black" FontSize="18" Width="266" TextAlignment="Center" VerticalAlignment="Center"/>
+                    </StackPanel>
+                </ComboBoxItem>
+            </ComboBox>
+
+            <Slider x:Name="fr100" Value="24"  Style="{StaticResource MyCustomStyleForSlider}" Margin="58,162,0,0" HorizontalAlignment="Left" Width="158" MinHeight="0" Height="40" VerticalAlignment="Top" TickFrequency="12" TickPlacement="Both" Maximum="48" Minimum="0" RenderTransformOrigin="0.5,0.5" Focusable="False" ValueChanged="ValueChanged">
+                <Slider.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="270"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Slider.RenderTransform>
+            </Slider>
+
+            <Slider x:Name="fr350" Value="24"  Style="{StaticResource MyCustomStyleForSlider}" Margin="123,162,0,0" HorizontalAlignment="Left" Width="158" MinHeight="0" Height="40" VerticalAlignment="Top" TickFrequency="12" TickPlacement="Both" Maximum="48" Minimum="0" RenderTransformOrigin="0.5,0.5" Focusable="False" ValueChanged="ValueChanged">
+                <Slider.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="270"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Slider.RenderTransform>
+            </Slider>
+
+            <Slider x:Name="fr1000" Value="24"  Style="{StaticResource MyCustomStyleForSlider}" Margin="184,162,0,0" HorizontalAlignment="Left" Width="158" MinHeight="0" Height="40" VerticalAlignment="Top" TickFrequency="12" TickPlacement="Both" Maximum="48" Minimum="0" RenderTransformOrigin="0.5,0.5" Focusable="False" ValueChanged="ValueChanged">
+                <Slider.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="270"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Slider.RenderTransform>
+            </Slider>
+
+            <Slider x:Name="fr3500" Value="24"  Style="{StaticResource MyCustomStyleForSlider}" Margin="247,162,0,0" HorizontalAlignment="Left" Width="158" MinHeight="0" Height="40" VerticalAlignment="Top" TickFrequency="12" TickPlacement="Both" Maximum="48" Minimum="0" RenderTransformOrigin="0.5,0.5" Focusable="False" ValueChanged="ValueChanged">
+                <Slider.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="270"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Slider.RenderTransform>
+            </Slider>
+
+            <Slider x:Name="fr13000" Value="24" Style="{StaticResource MyCustomStyleForSlider}" Margin="312,162,-35,0" HorizontalAlignment="Left" Width="158" MinHeight="0" Height="40" VerticalAlignment="Top" TickFrequency="12" TickPlacement="Both" Maximum="48" Minimum="0" RenderTransformOrigin="0.5,0.5" Focusable="False" ValueChanged="ValueChanged">
+                <Slider.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="270"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Slider.RenderTransform>
+            </Slider>
+
+            <TextBlock Text="+12 dB" Margin="46,104,0,0" FontFamily="/JPL_Gateway;component/Font/#Source Sans Pro" FontSize="15" HorizontalAlignment="Left" Width="60" TextAlignment="Right" Foreground="#FF6C6C6C" Height="18" VerticalAlignment="Top"/>
+            <TextBlock Text="0 dB" Margin="46,173,0,0" FontFamily="/JPL_Gateway;component/Font/#Source Sans Pro" FontSize="15" HorizontalAlignment="Left" Width="60" TextAlignment="Right" Foreground="#FF6C6C6C" Height="18" VerticalAlignment="Top"/>
+            <TextBlock Text="-12dB" Margin="46,242,0,0" FontFamily="/JPL_Gateway;component/Font/#Source Sans Pro" FontSize="15" HorizontalAlignment="Left" Width="60" TextAlignment="Right" Foreground="#FF6C6C6C" Height="18" VerticalAlignment="Top"/>
+
+            <Grid HorizontalAlignment="Left" Height="25"  VerticalAlignment="Top" Width="130" Margin="5,267,0,0">
+                <Viewbox Stretch="Uniform" StretchDirection="DownOnly">
+                    <TextBlock Text="{Binding Path=StrDevice_setting06, Source={StaticResource Resources}}" MinWidth="130" FontFamily="/JPL_Gateway;component/Font/#Source Sans Pro" FontSize="18"/>
+                </Viewbox>
+            </Grid>
+
+            <TextBlock Text="100 Hz" Margin="106,272,0,0" FontFamily="/JPL_Gateway;component/Font/#Source Sans Pro" FontSize="15" HorizontalAlignment="Left" Width="61" TextAlignment="Center" Foreground="#FF6C6C6C" Height="18" VerticalAlignment="Top"/>
+            <TextBlock Text="350 Hz" Margin="171,272,0,0" FontFamily="/JPL_Gateway;component/Font/#Source Sans Pro" FontSize="15" HorizontalAlignment="Left" Width="61" TextAlignment="Center" Foreground="#FF6C6C6C" Height="18" VerticalAlignment="Top"/>
+            <TextBlock Text="1 kHz" Margin="232,272,0,0" FontFamily="/JPL_Gateway;component/Font/#Source Sans Pro" FontSize="15" HorizontalAlignment="Left" Width="61" TextAlignment="Center" Foreground="#FF6C6C6C" Height="18" VerticalAlignment="Top"/>
+            <TextBlock Text="3.5 kHz" Margin="295,272,0,0" FontFamily="/JPL_Gateway;component/Font/#Source Sans Pro" FontSize="15" HorizontalAlignment="Left" Width="61" TextAlignment="Center" Foreground="#FF6C6C6C" Height="18" VerticalAlignment="Top"/>
+            <TextBlock Text="13 kHz" Margin="360,272,0,0" FontFamily="/JPL_Gateway;component/Font/#Source Sans Pro" FontSize="15" HorizontalAlignment="Left" Width="61" TextAlignment="Center" Foreground="#FF6C6C6C" Height="18" VerticalAlignment="Top"/>
+
+            <Button x:Name="EQ_apply" Content="{Binding Path=StrDevice_setting07, Source={StaticResource Resources}}" FontFamily="/JPL_Gateway;component/Font/#Source Sans Pro"  Style="{StaticResource Apply_Button}" Width="130" Margin="290,304,0,0" HorizontalAlignment="Left" FontSize="15" Focusable="False" Click="EQ_apply_Click" Height="36" VerticalAlignment="Top"/>
+        </Grid>
+
+        <Grid x:Name="BeepGrid" Margin="465,120,0,0" Width="435" Height="240" VerticalAlignment="Top" HorizontalAlignment="Left">
+            <Grid HorizontalAlignment="Left" Height="50"  VerticalAlignment="Top" Width="410" Margin="5,0,0,0">
+                <Viewbox Stretch="Uniform" StretchDirection="DownOnly">
+                    <TextBlock Text="{Binding Path=StrDevice_setting09, Source={StaticResource Resources}}" MinWidth="410" FontFamily="/JPL_Gateway;component/Font/#Source Sans Pro" FontSize="25"/>
+                </Viewbox>
+            </Grid>
+
+            <Grid HorizontalAlignment="Left" Height="25"  VerticalAlignment="Top" Width="250" Margin="5,55,0,0">
+                <Viewbox Stretch="Uniform" StretchDirection="DownOnly">
+                    <TextBlock Text="{Binding Path=StrDevice_setting10, Source={StaticResource Resources}}" MinWidth="250" FontFamily="/JPL_Gateway;component/Font/#Source Sans Pro" FontSize="18"/>
+                </Viewbox>
+            </Grid>
+
+            <Grid HorizontalAlignment="Left" Height="25"  VerticalAlignment="Top" Width="250" Margin="5,105,0,0">
+                <Viewbox Stretch="Uniform" StretchDirection="DownOnly">
+                    <TextBlock Text="{Binding Path=StrDevice_setting11, Source={StaticResource Resources}}" MinWidth="250" FontFamily="/JPL_Gateway;component/Font/#Source Sans Pro" FontSize="18"/>
+                </Viewbox>
+            </Grid>
+
+            <Grid HorizontalAlignment="Left" Height="25"  VerticalAlignment="Top" Width="250" Margin="5,155,0,0">
+                <Viewbox Stretch="Uniform" StretchDirection="DownOnly">
+                    <TextBlock Text="{Binding Path=StrDevice_setting12, Source={StaticResource Resources}}" MinWidth="250" FontFamily="/JPL_Gateway;component/Font/#Source Sans Pro" FontSize="18"/>
+                </Viewbox>
+            </Grid>
+
+            <ToggleButton x:Name="Keytone" Width="46" Height="28" Style="{StaticResource ToggleButton}" Margin="332,53,57,159" Click="Beep_Change" Focusable="False"/>
+            <ToggleButton x:Name="Ringtone" Width="46" Height="28" Style="{StaticResource ToggleButton}" Margin="332,105,57,107" Click="Beep_Change" Focusable="False"/>
+            <ComboBox x:Name="Muteinter" Margin="291,148,0,0" Style="{StaticResource ComboBox}" SelectedIndex="0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="131" Focusable="False" DropDownClosed="Beep_Change">
+                <ComboBoxItem>
+                    <StackPanel Orientation="Horizontal" Width="121" Height="32">
+                        <TextBlock Text="OFF" Foreground="Black" FontSize="18" Width="121" TextAlignment="Center" VerticalAlignment="Center"/>
+                    </StackPanel>
+                </ComboBoxItem>
+                <ComboBoxItem>
+                    <StackPanel Orientation="Horizontal" Width="121" Height="32">
+                        <TextBlock Text="2.5 sec" Foreground="Black" FontSize="18" Width="121" TextAlignment="Center" VerticalAlignment="Center"/>
+                    </StackPanel>
+                </ComboBoxItem>
+                <ComboBoxItem>
+                    <StackPanel Orientation="Horizontal" Width="121" Height="32">
+                        <TextBlock Text="5 sec" Foreground="Black" FontSize="18" Width="121" TextAlignment="Center" VerticalAlignment="Center"/>
+                    </StackPanel>
+                </ComboBoxItem>
+                <ComboBoxItem>
+                    <StackPanel Orientation="Horizontal" Width="121" Height="32">
+                        <TextBlock Text="15 sec" Foreground="Black" FontSize="18" Width="121" TextAlignment="Center" VerticalAlignment="Center"/>
+                    </StackPanel>
+                </ComboBoxItem>
+            </ComboBox>
+            <Button x:Name="Beep_apply" Content="{Binding Path=StrDevice_setting07, Source={StaticResource Resources}}" FontFamily="/JPL_Gateway;component/Font/#Source Sans Pro"  Style="{StaticResource Apply_Button}" Width="130" Height="36" Margin="291,195,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="15" Focusable="False" Click="Beep_apply_Click"/>
+        </Grid>
+
+        <Grid x:Name="SoftphoneGrid"  Margin="20,475,0,-25" Width="435" Height="150" VerticalAlignment="Top" HorizontalAlignment="Left">
+            <Grid HorizontalAlignment="Left" Height="50"  VerticalAlignment="Top" Width="410" Margin="5,0,0,0">
+                <Viewbox Stretch="Uniform" StretchDirection="DownOnly">
+                    <TextBlock Text="{Binding Path=StrDevice_setting08, Source={StaticResource Resources}}" MinWidth="410" FontFamily="/JPL_Gateway;component/Font/#Source Sans Pro" FontSize="25"/>
+                </Viewbox>
+            </Grid>
+
+            <ComboBox x:Name="Softphonelist" Margin="5,48,0,0" Style="{StaticResource ComboBox}" VerticalAlignment="Top" HorizontalAlignment="Left" Width="414" Height="38" Focusable="False" DropDownClosed="Softphonelist_DropDownClosed">
+                <ComboBoxItem>
+                    <StackPanel Orientation="Horizontal" Width="404" Height="30">
+                        <TextBlock Margin="10,0,0,0" Text="Avaya One-X Agent" Foreground="Black" FontSize="15" Width="250"  VerticalAlignment="Center"/>
+                        <TextBlock x:Name="ReadyOneX" Text="(Not ready)" Foreground="Gray" FontSize="15" Width="80" TextAlignment="Right"  VerticalAlignment="Center"/>
+                        <Image x:Name="CheckOneX" Visibility="Hidden" Margin="10,0,0,0" Source="/JPL_Gateway;component/Resources/Button_Icon/Check.png" Width="20" Height="20"/>
+                    </StackPanel>
+                </ComboBoxItem>
+                <ComboBoxItem>
+                    <StackPanel Orientation="Horizontal" Width="404" Height="30">
+                        <TextBlock Margin="10,0,0,0" Text="Avaya One-X Communicator" Foreground="Black" FontSize="15" Width="250"  VerticalAlignment="Center"/>
+                        <TextBlock x:Name="ReadyOneXComm" Text="(Not ready)" Foreground="Gray" FontSize="15" Width="80" TextAlignment="Right"  VerticalAlignment="Center"/>
+                        <Image x:Name="CheckOneXComm" Visibility="Hidden" Margin="10,0,0,0" Source="/JPL_Gateway;component/Resources/Button_Icon/Check.png" Width="20" Height="20"/>
+                    </StackPanel>
+                </ComboBoxItem>
+                <ComboBoxItem>
+                    <StackPanel Orientation="Horizontal" Width="404" Height="30">
+                        <TextBlock Margin="10,0,0,0" Text="Avaya IX Workplace" Foreground="Black" FontSize="15" Width="250"  VerticalAlignment="Center"/>
+                        <TextBlock x:Name="ReadyIXWorkplace" Text="(Not ready)" Foreground="Gray" FontSize="15" Width="80" TextAlignment="Right"  VerticalAlignment="Center"/>
+                        <Image x:Name="CheckIXWorkplace" Visibility="Hidden" Margin="10,0,0,0" Source="/JPL_Gateway;component/Resources/Button_Icon/Check.png" Width="20" Height="20"/>
+                    </StackPanel>
+                </ComboBoxItem>
+                <ComboBoxItem>
+                    <StackPanel Orientation="Horizontal" Width="404" Height="30">
+                        <TextBlock Margin="10,0,0,0" Text="Cisco Jabber" Foreground="Black" FontSize="15" Width="250"  VerticalAlignment="Center"/>
+                        <TextBlock x:Name="ReadyJabber" Text="(Not ready)" Foreground="Gray" FontSize="15" Width="80" TextAlignment="Right"  VerticalAlignment="Center"/>
+                        <Image x:Name="CheckJabber" Visibility="Hidden" Margin="10,0,0,0" Source="/JPL_Gateway;component/Resources/Button_Icon/Check.png" Width="20" Height="20"/>
+                    </StackPanel>
+                </ComboBoxItem>
+                <ComboBoxItem>
+                    <StackPanel Orientation="Horizontal" Width="404" Height="30">
+                        <TextBlock Margin="10,0,0,0" Text="CounterPath Bria" Foreground="Black" FontSize="15" Width="250"  VerticalAlignment="Center"/>
+                        <TextBlock x:Name="ReadyBria" Text="(Not ready)" Foreground="Gray" FontSize="15" Width="80" TextAlignment="Right"  VerticalAlignment="Center"/>
+                        <Image x:Name="CheckBria" Visibility="Hidden" Margin="10,0,0,0" Source="/JPL_Gateway;component/Resources/Button_Icon/Check.png" Width="20" Height="20"/>
+                    </StackPanel>
+                </ComboBoxItem>
+                <ComboBoxItem>
+                    <StackPanel Orientation="Horizontal" Width="404" Height="30">
+                        <TextBlock Margin="10,0,0,0" Text="Bria" Foreground="Black" FontSize="15" Width="250"  VerticalAlignment="Center"/>
+                        <TextBlock x:Name="ReadyBria6" Text="(Not ready)" Foreground="Gray" FontSize="15" Width="80" TextAlignment="Right"  VerticalAlignment="Center"/>
+                        <Image x:Name="CheckBria6" Visibility="Hidden" Margin="10,0,0,0" Source="/JPL_Gateway;component/Resources/Button_Icon/Check.png" Width="20" Height="20"/>
+                    </StackPanel>
+                </ComboBoxItem>
+                <ComboBoxItem>
+                    <StackPanel Orientation="Horizontal" Width="404" Height="30">
+                        <TextBlock Margin="10,0,0,0" Text="3CXPhone for Windows" Foreground="Black" FontSize="15" Width="250"  VerticalAlignment="Center"/>
+                        <TextBlock x:Name="Ready3CX" Text="(Not ready)" Foreground="Gray" FontSize="15" Width="80" TextAlignment="Right"  VerticalAlignment="Center"/>
+                        <Image x:Name="Check3CX" Visibility="Hidden" Margin="10,0,0,0" Source="/JPL_Gateway;component/Resources/Button_Icon/Check.png" Width="20" Height="20"/>
+                    </StackPanel>
+                </ComboBoxItem>
+            </ComboBox>
+            <Button  x:Name="Softphone_apply" Content="{Binding Path=StrDevice_setting07, Source={StaticResource Resources}}" FontFamily="/JPL_Gateway;component/Font/#Source Sans Pro"  Style="{StaticResource Apply_Button}" Width="130" Margin="290,104,0,0" HorizontalAlignment="Left" FontSize="15" Focusable="False" Height="36" VerticalAlignment="Top" Click="Softphone_Apply_Click"/>
+
+
+        </Grid>
+    </Grid>
+</Page>

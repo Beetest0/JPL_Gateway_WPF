@@ -1,0 +1,140 @@
+C:\Users\wkyoon\Documents\Visual Studio 2013\Projects\HeadsetKorea\FreeMateSoftPhone\bin\Debug\FreeMateSoftPhone.dll
+C:\Users\wkyoon\Documents\Visual Studio 2013\Projects\HeadsetKorea\FreeMateSoftPhone\bin\Debug\FreeMateSoftPhone.pdb
+C:\Users\wkyoon\Documents\Visual Studio 2013\Projects\HeadsetKorea\FreeMateSoftPhone\bin\Debug\CallTriggerCmdServiceProvider.dll
+C:\Users\wkyoon\Documents\Visual Studio 2013\Projects\HeadsetKorea\FreeMateSoftPhone\bin\Debug\SuperSocket.ClientEngine.dll
+C:\Users\wkyoon\Documents\Visual Studio 2013\Projects\HeadsetKorea\FreeMateSoftPhone\bin\Debug\WebSocket4Net.dll
+C:\Users\wkyoon\Documents\Visual Studio 2013\Projects\HeadsetKorea\FreeMateSoftPhone\obj\Debug\Interop.SKYPE4COMLib.dll
+C:\Users\wkyoon\Documents\Visual Studio 2013\Projects\HeadsetKorea\FreeMateSoftPhone\obj\Debug\FreeMateSoftPhone.csproj.ResolveComReference.cache
+C:\Users\wkyoon\Documents\Visual Studio 2013\Projects\HeadsetKorea\FreeMateSoftPhone\obj\Debug\FreeMateSoftPhone.dll
+C:\Users\wkyoon\Documents\Visual Studio 2013\Projects\HeadsetKorea\FreeMateSoftPhone\obj\Debug\FreeMateSoftPhone.pdb
+C:\Users\wkyoon\Documents\Visual Studio 2013\Projects\HeadsetKorea\FreeMateSoftPhone\obj\Debug\FreeMateSoftPhone.csprojResolveAssemblyReference.cache
+E:\기러기\Visual Studio 2013\Projects\HeadsetKorea\FreeMateSoftPhone\obj\Debug\FreeMateSoftPhone.csprojResolveAssemblyReference.cache
+E:\기러기\Visual Studio 2013\Projects\HeadsetKorea\FreeMateSoftPhone\obj\Debug\FreeMateSoftPhone.csproj.ResolveComReference.cache
+E:\기러기\Visual Studio 2013\Projects\HeadsetKorea\FreeMateSoftPhone\obj\Debug\FreeMateSoftPhone.dll
+E:\기러기\Visual Studio 2013\Projects\HeadsetKorea\FreeMateSoftPhone\obj\Debug\FreeMateSoftPhone.pdb
+E:\기러기\Visual Studio 2013\Projects\HeadsetKorea\FreeMateSoftPhone\bin\Debug\FreeMateSoftPhone.dll
+E:\기러기\Visual Studio 2013\Projects\HeadsetKorea\FreeMateSoftPhone\bin\Debug\FreeMateSoftPhone.pdb
+E:\기러기\Visual Studio 2013\Projects\HeadsetKorea\FreeMateSoftPhone\bin\Debug\CallTriggerCmdServiceProvider.dll
+E:\기러기\Visual Studio 2013\Projects\HeadsetKorea\FreeMateSoftPhone\bin\Debug\SuperSocket.ClientEngine.dll
+E:\기러기\Visual Studio 2013\Projects\HeadsetKorea\FreeMateSoftPhone\bin\Debug\WebSocket4Net.dll
+E:\기러기\Visual Studio 2013\Projects\HeadsetKorea\FreeMateSoftPhone\obj\Debug\Interop.SKYPE4COMLib.dll
+D:\C_DOWNLOAD\Documents\Visual Studio 2013\Projects\HeadsetKorea\FreeMateSoftPhone\bin\Debug\FreeMateSoftPhone.dll
+D:\C_DOWNLOAD\Documents\Visual Studio 2013\Projects\HeadsetKorea\FreeMateSoftPhone\bin\Debug\FreeMateSoftPhone.pdb
+D:\C_DOWNLOAD\Documents\Visual Studio 2013\Projects\HeadsetKorea\FreeMateSoftPhone\bin\Debug\CallTriggerCmdServiceProvider.dll
+D:\C_DOWNLOAD\Documents\Visual Studio 2013\Projects\HeadsetKorea\FreeMateSoftPhone\bin\Debug\SuperSocket.ClientEngine.dll
+D:\C_DOWNLOAD\Documents\Visual Studio 2013\Projects\HeadsetKorea\FreeMateSoftPhone\bin\Debug\WebSocket4Net.dll
+D:\C_DOWNLOAD\Documents\Visual Studio 2013\Projects\HeadsetKorea\FreeMateSoftPhone\obj\Debug\Interop.SKYPE4COMLib.dll
+D:\C_DOWNLOAD\Documents\Visual Studio 2013\Projects\HeadsetKorea\FreeMateSoftPhone\obj\Debug\FreeMateSoftPhone.csproj.ResolveComReference.cache
+D:\C_DOWNLOAD\Documents\Visual Studio 2013\Projects\HeadsetKorea\FreeMateSoftPhone\obj\Debug\FreeMateSoftPhone.dll
+D:\C_DOWNLOAD\Documents\Visual Studio 2013\Projects\HeadsetKorea\FreeMateSoftPhone\obj\Debug\FreeMateSoftPhone.pdb
+D:\vs13_workspace\HeadsetKorea\FreeMateSoftPhone\obj\Debug\FreeMateSoftPhone.csprojResolveAssemblyReference.cache
+D:\vs13_workspace\HeadsetKorea\FreeMateSoftPhone\obj\Debug\FreeMateSoftPhone.csproj.ResolveComReference.cache
+D:\vs13_workspace\HeadsetKorea\FreeMateSoftPhone\obj\Debug\FreeMateSoftPhone.dll
+D:\vs13_workspace\HeadsetKorea\FreeMateSoftPhone\obj\Debug\FreeMateSoftPhone.pdb
+D:\vs13_workspace\HeadsetKorea\FreeMateSoftPhone\bin\Debug\FreeMateSoftPhone.dll
+D:\vs13_workspace\HeadsetKorea\FreeMateSoftPhone\bin\Debug\FreeMateSoftPhone.pdb
+D:\vs13_workspace\HeadsetKorea\FreeMateSoftPhone\bin\Debug\CallTriggerCmdServiceProvider.dll
+D:\vs13_workspace\HeadsetKorea\FreeMateSoftPhone\bin\Debug\SuperSocket.ClientEngine.dll
+D:\vs13_workspace\HeadsetKorea\FreeMateSoftPhone\bin\Debug\WebSocket4Net.dll
+D:\vs13_workspace\HeadsetKorea\FreeMateSoftPhone\obj\Debug\Interop.SKYPE4COMLib.dll
+D:\2018\dasan\softphone\source\HeadsetKorea\FreeMateSoftPhone\bin\Debug\FreeMateSoftPhone.dll
+D:\2018\dasan\softphone\source\HeadsetKorea\FreeMateSoftPhone\bin\Debug\FreeMateSoftPhone.pdb
+D:\2018\dasan\softphone\source\HeadsetKorea\FreeMateSoftPhone\bin\Debug\CallTriggerCmdServiceProvider.dll
+D:\2018\dasan\softphone\source\HeadsetKorea\FreeMateSoftPhone\bin\Debug\SuperSocket.ClientEngine.dll
+D:\2018\dasan\softphone\source\HeadsetKorea\FreeMateSoftPhone\bin\Debug\WebSocket4Net.dll
+D:\2018\dasan\softphone\source\HeadsetKorea\FreeMateSoftPhone\obj\Debug\Interop.SKYPE4COMLib.dll
+D:\2018\dasan\softphone\source\HeadsetKorea\FreeMateSoftPhone\obj\Debug\FreeMateSoftPhone.csproj.ResolveComReference.cache
+D:\2018\dasan\softphone\source\HeadsetKorea\FreeMateSoftPhone\obj\Debug\FreeMateSoftPhone.dll
+D:\2018\dasan\softphone\source\HeadsetKorea\FreeMateSoftPhone\obj\Debug\FreeMateSoftPhone.pdb
+F:\2018\dasan\softphone\source\HeadsetKorea\FreeMateSoftPhone\bin\Debug\FreeMateSoftPhone.dll
+F:\2018\dasan\softphone\source\HeadsetKorea\FreeMateSoftPhone\bin\Debug\FreeMateSoftPhone.pdb
+F:\2018\dasan\softphone\source\HeadsetKorea\FreeMateSoftPhone\bin\Debug\CallTriggerCmdServiceProvider.dll
+F:\2018\dasan\softphone\source\HeadsetKorea\FreeMateSoftPhone\bin\Debug\SuperSocket.ClientEngine.dll
+F:\2018\dasan\softphone\source\HeadsetKorea\FreeMateSoftPhone\bin\Debug\WebSocket4Net.dll
+F:\2018\dasan\softphone\source\HeadsetKorea\FreeMateSoftPhone\obj\Debug\Interop.SKYPE4COMLib.dll
+F:\2018\dasan\softphone\source\HeadsetKorea\FreeMateSoftPhone\obj\Debug\FreeMateSoftPhone.csproj.ResolveComReference.cache
+F:\2018\dasan\softphone\source\HeadsetKorea\FreeMateSoftPhone\obj\Debug\FreeMateSoftPhone.dll
+F:\2018\dasan\softphone\source\HeadsetKorea\FreeMateSoftPhone\obj\Debug\FreeMateSoftPhone.pdb
+D:\2018\dasan\softphone\source\HeadsetKorea\FreeMateSoftPhone\obj\Debug\FreeMateSoftPhone.csprojResolveAssemblyReference.cache
+D:\2018\dasan\softphone\source\HeadsetKorea_pc\FreeMateSoftPhone\bin\Debug\FreeMateSoftPhone.dll
+D:\2018\dasan\softphone\source\HeadsetKorea_pc\FreeMateSoftPhone\bin\Debug\FreeMateSoftPhone.pdb
+D:\2018\dasan\softphone\source\HeadsetKorea_pc\FreeMateSoftPhone\bin\Debug\CallTriggerCmdServiceProvider.dll
+D:\2018\dasan\softphone\source\HeadsetKorea_pc\FreeMateSoftPhone\bin\Debug\SuperSocket.ClientEngine.dll
+D:\2018\dasan\softphone\source\HeadsetKorea_pc\FreeMateSoftPhone\bin\Debug\WebSocket4Net.dll
+D:\2018\dasan\softphone\source\HeadsetKorea_pc\FreeMateSoftPhone\obj\Debug\Interop.HeadSetInterfaceLib.dll
+D:\2018\dasan\softphone\source\HeadsetKorea_pc\FreeMateSoftPhone\obj\Debug\FreeMateSoftPhone.csproj.ResolveComReference.cache
+D:\2018\dasan\softphone\source\HeadsetKorea_pc\FreeMateSoftPhone\obj\Debug\FreeMateSoftPhone.dll
+D:\2018\dasan\softphone\source\HeadsetKorea_pc\FreeMateSoftPhone\obj\Debug\FreeMateSoftPhone.pdb
+D:\2018\dasan\softphone\source\HeadsetKorea_pc\FreeMateSoftPhone\bin\Debug\Mitel.Communicator.API.Contract.dll
+D:\2018\dasan\softphone\source\HeadsetKorea_pc\FreeMateSoftPhone\obj\Debug\FreeMateSoftPhone.csprojResolveAssemblyReference.cache
+D:\SWD\Softlink\HeadsetKorea\FreeMateSoftPhone\obj\Debug\FreeMateSoftPhone.csprojAssemblyReference.cache
+D:\SWD\Softlink\HeadsetKorea\FreeMateSoftPhone\obj\Debug\FreeMateSoftPhone.csproj.ResolveComReference.cache
+D:\SWD\Softlink\HeadsetKorea\FreeMateSoftPhone\obj\Debug\FreeMateSoftPhone.dll
+D:\SWD\Softlink\HeadsetKorea\FreeMateSoftPhone\obj\Debug\FreeMateSoftPhone.pdb
+C:\Work\HeadsetKoreaK_20220119\FreeMateSoftPhone\bin\Debug\FreeMateSoftPhone.dll
+C:\Work\HeadsetKoreaK_20220119\FreeMateSoftPhone\bin\Debug\FreeMateSoftPhone.pdb
+C:\Work\HeadsetKoreaK_20220119\FreeMateSoftPhone\bin\Debug\CallTriggerCmdServiceProvider.dll
+C:\Work\HeadsetKoreaK_20220119\FreeMateSoftPhone\bin\Debug\Newtonsoft.Json.dll
+C:\Work\HeadsetKoreaK_20220119\FreeMateSoftPhone\bin\Debug\Newtonsoft.Json.Schema.dll
+C:\Work\HeadsetKoreaK_20220119\FreeMateSoftPhone\bin\Debug\SuperSocket.ClientEngine.dll
+C:\Work\HeadsetKoreaK_20220119\FreeMateSoftPhone\bin\Debug\WebSocket4Net.dll
+C:\Work\HeadsetKoreaK_20220119\FreeMateSoftPhone\bin\Debug\Newtonsoft.Json.xml
+C:\Work\HeadsetKoreaK_20220119\FreeMateSoftPhone\bin\Debug\Newtonsoft.Json.Schema.xml
+C:\Work\HeadsetKoreaK_20220119\FreeMateSoftPhone\obj\Debug\FreeMateSoftPhone.csproj.AssemblyReference.cache
+C:\Work\HeadsetKoreaK_20220119\FreeMateSoftPhone\obj\Debug\Interop.AVAYAIEHELPERLib.dll
+C:\Work\HeadsetKoreaK_20220119\FreeMateSoftPhone\obj\Debug\FreeMateSoftPhone.csproj.ResolveComReference.cache
+C:\Work\HeadsetKoreaK_20220119\FreeMateSoftPhone\obj\Debug\FreeMateSoftPhone.csproj.CoreCompileInputs.cache
+C:\Work\HeadsetKoreaK_20220119\FreeMateSoftPhone\obj\Debug\FreeMateSoftPhone.csproj.CopyComplete
+C:\Work\HeadsetKoreaK_20220119\FreeMateSoftPhone\obj\Debug\FreeMateSoftPhone.dll
+C:\Work\HeadsetKoreaK_20220119\FreeMateSoftPhone\obj\Debug\FreeMateSoftPhone.pdb
+C:\Work\HeadsetKoreaK_20220323\FreeMateSoftPhone\bin\Debug\FreeMateSoftPhone.dll
+C:\Work\HeadsetKoreaK_20220323\FreeMateSoftPhone\bin\Debug\FreeMateSoftPhone.pdb
+C:\Work\HeadsetKoreaK_20220323\FreeMateSoftPhone\bin\Debug\CallTriggerCmdServiceProvider.dll
+C:\Work\HeadsetKoreaK_20220323\FreeMateSoftPhone\bin\Debug\Newtonsoft.Json.dll
+C:\Work\HeadsetKoreaK_20220323\FreeMateSoftPhone\bin\Debug\Newtonsoft.Json.Schema.dll
+C:\Work\HeadsetKoreaK_20220323\FreeMateSoftPhone\bin\Debug\SuperSocket.ClientEngine.dll
+C:\Work\HeadsetKoreaK_20220323\FreeMateSoftPhone\bin\Debug\WebSocket4Net.dll
+C:\Work\HeadsetKoreaK_20220323\FreeMateSoftPhone\bin\Debug\Newtonsoft.Json.xml
+C:\Work\HeadsetKoreaK_20220323\FreeMateSoftPhone\bin\Debug\Newtonsoft.Json.Schema.xml
+C:\Work\HeadsetKoreaK_20220323\FreeMateSoftPhone\obj\Debug\Interop.AVAYAIEHELPERLib.dll
+C:\Work\HeadsetKoreaK_20220323\FreeMateSoftPhone\obj\Debug\FreeMateSoftPhone.csproj.ResolveComReference.cache
+C:\Work\HeadsetKoreaK_20220323\FreeMateSoftPhone\obj\Debug\FreeMateSoftPhone.csproj.CoreCompileInputs.cache
+C:\Work\HeadsetKoreaK_20220323\FreeMateSoftPhone\obj\Debug\FreeMateSoftPhone.csproj.CopyComplete
+C:\Work\HeadsetKoreaK_20220323\FreeMateSoftPhone\obj\Debug\FreeMateSoftPhone.dll
+C:\Work\HeadsetKoreaK_20220323\FreeMateSoftPhone\obj\Debug\FreeMateSoftPhone.pdb
+C:\Work\HeadsetKoreaK_20220323\FreeMateSoftPhone\obj\Debug\FreeMateSoftPhone.csproj.AssemblyReference.cache
+C:\Work\JPL_Gateway_221205_TEST\FreeMateSoftPhone\bin\Debug\FreeMateSoftPhone.dll
+C:\Work\JPL_Gateway_221205_TEST\FreeMateSoftPhone\bin\Debug\FreeMateSoftPhone.pdb
+C:\Work\JPL_Gateway_221205_TEST\FreeMateSoftPhone\bin\Debug\AvayaClientServices.dll
+C:\Work\JPL_Gateway_221205_TEST\FreeMateSoftPhone\bin\Debug\Newtonsoft.Json.dll
+C:\Work\JPL_Gateway_221205_TEST\FreeMateSoftPhone\bin\Debug\Newtonsoft.Json.Schema.dll
+C:\Work\JPL_Gateway_221205_TEST\FreeMateSoftPhone\bin\Debug\scpmediadll.dll
+C:\Work\JPL_Gateway_221205_TEST\FreeMateSoftPhone\bin\Debug\SuperSocket.ClientEngine.dll
+C:\Work\JPL_Gateway_221205_TEST\FreeMateSoftPhone\bin\Debug\WebSocket4Net.dll
+C:\Work\JPL_Gateway_221205_TEST\FreeMateSoftPhone\bin\Debug\Newtonsoft.Json.xml
+C:\Work\JPL_Gateway_221205_TEST\FreeMateSoftPhone\bin\Debug\Newtonsoft.Json.Schema.xml
+C:\Work\JPL_Gateway_221205_TEST\FreeMateSoftPhone\obj\Debug\Interop.AVAYAIEHELPERLib.dll
+C:\Work\JPL_Gateway_221205_TEST\FreeMateSoftPhone\obj\Debug\Interop.SKYPE4COMLib.dll
+C:\Work\JPL_Gateway_221205_TEST\FreeMateSoftPhone\obj\Debug\FreeMateSoftPhone.csproj.ResolveComReference.cache
+C:\Work\JPL_Gateway_221205_TEST\FreeMateSoftPhone\obj\Debug\FreeMateSoftPhone.csproj.CoreCompileInputs.cache
+C:\Work\JPL_Gateway_221205_TEST\FreeMateSoftPhone\obj\Debug\FreeMateSoftPhone.csproj.CopyComplete
+C:\Work\JPL_Gateway_221205_TEST\FreeMateSoftPhone\obj\Debug\FreeMateSoftPhone.dll
+C:\Work\JPL_Gateway_221205_TEST\FreeMateSoftPhone\obj\Debug\FreeMateSoftPhone.pdb
+C:\Users\di999\source\repos\JPL_Gateway_wpf_azure\FreeMateSoftPhone\bin\Debug\FreeMateSoftPhone.dll
+C:\Users\di999\source\repos\JPL_Gateway_wpf_azure\FreeMateSoftPhone\bin\Debug\FreeMateSoftPhone.pdb
+C:\Users\di999\source\repos\JPL_Gateway_wpf_azure\FreeMateSoftPhone\bin\Debug\AvayaClientServices.dll
+C:\Users\di999\source\repos\JPL_Gateway_wpf_azure\FreeMateSoftPhone\bin\Debug\Newtonsoft.Json.dll
+C:\Users\di999\source\repos\JPL_Gateway_wpf_azure\FreeMateSoftPhone\bin\Debug\Newtonsoft.Json.Schema.dll
+C:\Users\di999\source\repos\JPL_Gateway_wpf_azure\FreeMateSoftPhone\bin\Debug\scpmediadll.dll
+C:\Users\di999\source\repos\JPL_Gateway_wpf_azure\FreeMateSoftPhone\bin\Debug\SuperSocket.ClientEngine.dll
+C:\Users\di999\source\repos\JPL_Gateway_wpf_azure\FreeMateSoftPhone\bin\Debug\WebSocket4Net.dll
+C:\Users\di999\source\repos\JPL_Gateway_wpf_azure\FreeMateSoftPhone\bin\Debug\Newtonsoft.Json.xml
+C:\Users\di999\source\repos\JPL_Gateway_wpf_azure\FreeMateSoftPhone\bin\Debug\Newtonsoft.Json.Schema.xml
+C:\Users\di999\source\repos\JPL_Gateway_wpf_azure\FreeMateSoftPhone\obj\Debug\FreeMateSoftPhone.csproj.AssemblyReference.cache
+C:\Users\di999\source\repos\JPL_Gateway_wpf_azure\FreeMateSoftPhone\obj\Debug\Interop.AVAYAIEHELPERLib.dll
+C:\Users\di999\source\repos\JPL_Gateway_wpf_azure\FreeMateSoftPhone\obj\Debug\Interop.SKYPE4COMLib.dll
+C:\Users\di999\source\repos\JPL_Gateway_wpf_azure\FreeMateSoftPhone\obj\Debug\FreeMateSoftPhone.csproj.ResolveComReference.cache
+C:\Users\di999\source\repos\JPL_Gateway_wpf_azure\FreeMateSoftPhone\obj\Debug\FreeMateSoftPhone.csproj.CoreCompileInputs.cache
+C:\Users\di999\source\repos\JPL_Gateway_wpf_azure\FreeMateSoftPhone\obj\Debug\FreeMateSoftPhone.csproj.CopyComplete
+C:\Users\di999\source\repos\JPL_Gateway_wpf_azure\FreeMateSoftPhone\obj\Debug\FreeMateSoftPhone.dll
+C:\Users\di999\source\repos\JPL_Gateway_wpf_azure\FreeMateSoftPhone\obj\Debug\FreeMateSoftPhone.pdb

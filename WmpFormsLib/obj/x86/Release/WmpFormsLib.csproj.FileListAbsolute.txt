@@ -1,0 +1,10 @@
+C:\Users\di999\source\repos\JPL_Gateway\WmpFormsLib\bin\x86\Release\WmpFormsLib.dll
+C:\Users\di999\source\repos\JPL_Gateway\WmpFormsLib\bin\x86\Release\Interop.WMPLib.dll
+C:\Users\di999\source\repos\JPL_Gateway\WmpFormsLib\bin\x86\Release\AxInterop.WMPLib.dll
+C:\Users\di999\source\repos\JPL_Gateway\WmpFormsLib\obj\x86\Release\Interop.WMPLib.dll
+C:\Users\di999\source\repos\JPL_Gateway\WmpFormsLib\obj\x86\Release\AxInterop.WMPLib.dll
+C:\Users\di999\source\repos\JPL_Gateway\WmpFormsLib\obj\x86\Release\WmpFormsLib.csproj.ResolveComReference.cache
+C:\Users\di999\source\repos\JPL_Gateway\WmpFormsLib\obj\x86\Release\WmpFormsLib.WmpControl.resources
+C:\Users\di999\source\repos\JPL_Gateway\WmpFormsLib\obj\x86\Release\WmpFormsLib.csproj.GenerateResource.cache
+C:\Users\di999\source\repos\JPL_Gateway\WmpFormsLib\obj\x86\Release\WmpFormsLib.csproj.CoreCompileInputs.cache
+C:\Users\di999\source\repos\JPL_Gateway\WmpFormsLib\obj\x86\Release\WmpFormsLib.dll

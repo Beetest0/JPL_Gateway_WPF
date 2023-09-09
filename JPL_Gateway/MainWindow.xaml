@@ -1,0 +1,206 @@
+﻿<Window x:Class="JPL_Gateway.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:JPL_Gateway"
+        xmlns:p="clr-namespace:JPL_Gateway.Properties"
+        UseLayoutRounding="True"
+        mc:Ignorable="d"
+        Title="JPL Gateway" Height="750" Width="1000" MinHeight="750" MinWidth="1000"
+        WindowStyle="None"
+        AllowsTransparency="True" Background="#FFE8E8E8"
+        WindowStartupLocation="CenterScreen" KeyboardNavigation.TabNavigation="None"
+        Closing="Window_Closing" Icon="Resources/JPL_icon.ico" ResizeMode="NoResize">
+    <!--SnapsToDevicePixels="True"-->
+    <!--UseLayoutRounding="True"-->
+
+    <Window.Triggers>
+        <EventTrigger RoutedEvent="Window.Loaded">
+            <BeginStoryboard>
+                <Storyboard>
+                </Storyboard>
+            </BeginStoryboard>
+        </EventTrigger>
+    </Window.Triggers>
+
+    <WindowChrome.WindowChrome>
+        <WindowChrome CaptionHeight="0" ResizeBorderThickness="5"/>
+    </WindowChrome.WindowChrome>
+    <Grid>
+        <Frame x:Name="frame4" Panel.ZIndex="1000" Visibility="Hidden"/>
+        <Border Name="main" BorderThickness="0" Margin="0">
+            <DockPanel>
+                <!-- Title Bar Area -->
+                <Border Name="border" DockPanel.Dock="Top" Height="100">
+                    <Grid>
+                        <Label Margin="0,77,0,0" HorizontalAlignment="Left" Width="300">
+                            <Label.Background>
+                                <ImageBrush ImageSource="Resources/Title/Logo_Bar_Crop.png" Stretch="Fill"/>
+                            </Label.Background>
+                        </Label>
+                        <Label Margin="300,77,0,0" Background="#0C2340"/>
+                        <Label VerticalContentAlignment="Center" HorizontalAlignment="Left" Width="120">
+                            <Label.Background>
+                                <ImageBrush ImageSource="Resources/Title/Logo_circle.png"/>
+                            </Label.Background>
+                            <Button Name="JPL_logo" Width="50" Height="50" Margin="10,-25,0,0" Style="{StaticResource ScaleIcon}" Click="PBMenuLogo_Click" Focusable="False" />
+                        </Label>
+                        <Label VerticalContentAlignment="Center" Margin="120,0,75,23" PreviewMouseDown="System_MouseDown" PreviewMouseMove="System_MouseMove">
+                            <!--<TextBlock Text="{Binding Title, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type Window}}}"/>-->
+                            <TextBlock Text="JPL Gateway" Margin="0,20,0,20" FontFamily="/JPL_Gateway;component/Font/#Source Sans Pro" FontSize="22"/>
+                        </Label>
+                        <Label Margin="0,25,3,23" HorizontalAlignment="Right" Width="35" Height="50">
+                            <Label.Background>
+                                <ImageBrush ImageSource="Resources/Title/Queens_award.png"/>
+                            </Label.Background>
+
+                        </Label>
+
+                        <!-- System Button Area -->
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,0,0,75">
+                            <StackPanel.Resources>
+                                <Style TargetType="{x:Type Button}" x:Key="systemButton">
+                                    <Setter Property="Padding" Value="0"/>
+                                    <Setter Property="Width" Value="35"/>
+                                    <Setter Property="Height" Value="25"/>
+                                    <Setter Property="HorizontalAlignment" Value="Right"/>
+                                    <Setter Property="VerticalAlignment" Value="Top"/>
+                                    <Setter Property="Background" Value="Transparent"/>
+                                    <Setter Property="Template">
+                                        <Setter.Value>
+                                            <ControlTemplate TargetType="{x:Type Button}">
+                                                <Border Background="{TemplateBinding Background}"  BorderThickness="0">
+                                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                                </Border>
+                                            </ControlTemplate>
+                                        </Setter.Value>
+                                    </Setter>
+                                    <Style.Triggers>
+                                        <Trigger Property="Button.IsMouseOver" Value="True">
+                                            <Setter Property="Button.Background" Value="LightGray" />
+                                        </Trigger>
+                                    </Style.Triggers>
+
+                                </Style>
+                            </StackPanel.Resources>
+
+                            <Button Height="25" Click="Mimimize_Click" Style="{StaticResource systemButton}">
+                                <Rectangle Width="11"
+                                       Stroke="Black"
+                                       StrokeThickness="0.75"/>
+                            </Button>
+
+                            <Button Height="25" Click="Close_Click">
+                                <Button.Style>
+                                    <Style TargetType="Button" BasedOn="{StaticResource systemButton}">
+                                        <Style.Triggers>
+                                            <Trigger Property="Button.IsMouseOver" Value="True">
+                                                <Setter Property="Button.Background" Value="Red" />
+                                            </Trigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Button.Style>
+                                <Canvas Height="25" Width="35">
+                                    <Line    
+                                    X1="12" Y1="8" 
+                                    X2="22" Y2="18"    
+                                    Stroke="Black" StrokeThickness="0.75"/>
+                                    <Line    
+                                    X1="12" Y1="18"    
+                                    X2="22" Y2="8"  
+                                    Stroke="Black" StrokeThickness="0.75"/>
+                                </Canvas>
+                            </Button>
+                        </StackPanel>
+                    </Grid>
+                </Border>
+
+                <!-- Content Area -->
+                <Grid DockPanel.Dock="Bottom">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="15*"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="80" />
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
+                        <Frame Name="frame0"  Grid.Column="0" Grid.RowSpan="2" />
+                        <Grid x:Name="sidebutton" Height="650" VerticalAlignment="Top" HorizontalAlignment="Left" Width="80">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="65"/>
+                                <RowDefinition Height="50"/>
+                                <RowDefinition Height="5"/>
+                                <RowDefinition Height="50"/>
+                                <RowDefinition Height="25"/>
+                                <RowDefinition Height="50"/>
+                                <RowDefinition Height="5"/>
+                                <RowDefinition Height="50"/>
+                                <RowDefinition Height="25"/>
+                                <RowDefinition Height="50"/>
+                                <RowDefinition Height="5"/>
+                                <RowDefinition Height="50"/>
+                                <RowDefinition Height="25"/>
+                                <RowDefinition Height="50"/>
+                                <RowDefinition Height="5"/>
+
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Viewbox Grid.Row="1" Stretch="None">
+                                <Button Width="50" Height="50" Click="Device_Click" Style="{StaticResource ScaleButton}" Focusable="False">
+                                    <Button.Background>
+                                        <ImageBrush ImageSource="Resources/Button_Icon/Device_DB.png"/>
+                                    </Button.Background>
+                                </Button>
+                            </Viewbox>
+                            <Viewbox Grid.Row="3" Width="70" VerticalAlignment="Top" Stretch="Uniform" StretchDirection="DownOnly">
+                                <TextBlock Text="{Binding Path=StrMain01, Source={StaticResource Resources}}" FontFamily="/JPL_Gateway;component/Font/#Source Sans Pro" FontSize="13" Foreground="#0C2340" TextAlignment="Center"></TextBlock>
+                            </Viewbox>
+
+                            <Viewbox Grid.Row="5" Stretch="None">
+                                <Button Width="50" Height="50" Click="Support_Click" Style="{StaticResource ScaleButton}" Focusable="False">
+                                    <Button.Background>
+                                        <ImageBrush ImageSource="Resources/Button_Icon/Support_DB.png"/>
+                                    </Button.Background>
+                                </Button>
+                            </Viewbox>
+                            <Viewbox Grid.Row="7" VerticalAlignment="Top" Stretch="Uniform" StretchDirection="DownOnly">
+                                <TextBlock Text="{Binding Path=StrMain02, Source={StaticResource Resources}}" FontFamily="/JPL_Gateway;component/Font/#Source Sans Pro" FontSize="13" Foreground="#0C2340" TextAlignment="Center"></TextBlock>
+                            </Viewbox>
+
+                            <Viewbox Grid.Row="9" Stretch="None">
+                                <Button Width="50" Height="50" Click="Settings_Click" Style="{StaticResource ScaleButton}" Focusable="False">
+                                    <Button.Background>
+                                        <ImageBrush ImageSource="Resources/Button_Icon/Settings_DB.png"/>
+                                    </Button.Background>
+                                </Button>
+                            </Viewbox>
+                            <Viewbox Grid.Row="11" VerticalAlignment="Top" Stretch="Uniform" StretchDirection="DownOnly">
+                                <TextBlock Text="{Binding Path=StrMain03, Source={StaticResource Resources}}" FontFamily="/JPL_Gateway;component/Font/#Source Sans Pro" FontSize="13" Foreground="#0C2340" TextAlignment="Center"></TextBlock>
+                            </Viewbox>
+
+                            <Viewbox Grid.Row="13" Stretch="None">
+                                <Button Width="50" Height="50" Click="Products_Click" Style="{StaticResource ScaleButton}" Focusable="False">
+                                    <Button.Background>
+                                        <ImageBrush ImageSource="Resources/Button_Icon/Products_DB.png"/>
+                                    </Button.Background>
+                                </Button>
+                            </Viewbox>
+                            <Viewbox Grid.Row="15" VerticalAlignment="Top" Stretch="Uniform" StretchDirection="DownOnly">
+                                <TextBlock Text="{Binding Path=StrMain04, Source={StaticResource Resources}}" FontFamily="/JPL_Gateway;component/Font/#Source Sans Pro" FontSize="13" Foreground="#0C2340" TextAlignment="Center"></TextBlock>
+                            </Viewbox>
+                        </Grid>
+                        <Frame Name="frame1"  Grid.Column="1" NavigationUIVisibility="Hidden" Source="View/Nodevice_Page.xaml" Navigating="HandleNavigating"/>
+                        <Frame Name="frame2"  NavigationUIVisibility="Hidden" Grid.RowSpan="2"/>
+                        <Border x:Name="Navigation_Border" BorderBrush="Transparent" BorderThickness="0" Grid.Column="1" Margin="175,115,0,0" HorizontalAlignment="Left" Width="570" Height="420" VerticalAlignment="Top">
+                            <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                                <Frame x:Name="frame5" NavigationUIVisibility="Hidden" Visibility="Hidden"/>
+                            </StackPanel>
+                        </Border>
+                    </Grid>
+                </Grid>
+            </DockPanel>
+        </Border>
+    </Grid>
+</Window>
